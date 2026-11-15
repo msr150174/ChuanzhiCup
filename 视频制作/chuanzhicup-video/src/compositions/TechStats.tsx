@@ -132,10 +132,15 @@ export const TechStats: React.FC = () => {
             (label, i) => {
               const appear = interpolate(
                 frame,
-                [170 + i * 15, 185 + i * 15],
+                [155 + i * 12, 168 + i * 12],
                 [0, 1],
                 { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }
               );
+              // 第三层用绿色高亮，并在出现后加脉冲
+              const isFallback = i === 2;
+              const pulse = isFallback
+                ? 1 + 0.04 * Math.sin((frame - 180) / 6)
+                : 1;
               return (
                 <div
                   key={label}
@@ -144,6 +149,7 @@ export const TechStats: React.FC = () => {
                   <div
                     style={{
                       opacity: appear,
+                      transform: `scale(${appear * pulse})`,
                       padding: '20px 32px',
                       background:
                         i === 2

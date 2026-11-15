@@ -75,3 +75,8 @@ desktop.ini
 *.mov
 *.avi
 !docs/demo/.gitkeep
+
+# ---- Remotion 视频项目 ----
+视频制作/**/node_modules/
+视频制作/**/out/
+视频制作/**/.remotion/
