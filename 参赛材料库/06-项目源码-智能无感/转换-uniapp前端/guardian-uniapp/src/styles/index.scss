@@ -1,0 +1,259 @@
+/**
+ * 全局样式
+ * ----------------------------------------------------------------------------
+ * 设计令牌来自原项目 app.css（138 个 CSS 变量），
+ * 这里把用到的核心变量集中定义。
+ *
+ * 配色：暖米白底 + 雾绿主色（适老化，长时间看不疲劳）
+ */
+
+/* ============ 设计令牌 ============ */
+page {
+  /* 背景 */
+  --bg: #f4efe6;              /* 页面底色（暖米白） */
+  --surface: #fff9ef;         /* 卡片底 */
+  --surface-2: #f0ebe0;       /* 次级卡片 */
+  --surface-3: #e8e3d8;       /* 更深一档 */
+
+  /* 主色 */
+  --primary: #8fa68e;         /* 雾绿 */
+  --primary-d: #5b9a7a;       /* 主色深 */
+  --primary-l: rgba(143, 166, 142, 0.15);
+  --primary-container: #d4e0d0;
+
+  /* 文字 */
+  --text-1: #2f2a24;          /* 主文字 */
+  --text-2: #7d746b;          /* 次要文字 */
+  --text-3: #b8b0a6;          /* 占位文字 */
+
+  /* 语义色 */
+  --success: #8fa68e;
+  --warning: #d4a574;
+  --warning-l: rgba(212, 165, 116, 0.15);
+  --danger: #e55a5a;
+  --danger-l: rgba(229, 90, 90, 0.12);
+  --info: #8fa68e;
+
+  /* 边框与分割 */
+  --border: #e5ddd0;
+  --divider: #f0ebe0;
+
+  /* 圆角 */
+  --radius-sm: 12rpx;
+  --radius: 24rpx;
+  --radius-lg: 32rpx;
+  --radius-xl: 40rpx;
+  --radius-full: 999rpx;
+
+  /* 间距 */
+  --space-xs: 8rpx;
+  --space-sm: 16rpx;
+  --space: 24rpx;
+  --space-lg: 32rpx;
+  --space-xl: 48rpx;
+
+  /* 阴影 */
+  --shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8rpx 40rpx rgba(143, 166, 142, 0.16);
+
+  background-color: var(--bg);
+  color: var(--text-1);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+/* ============ 通用类 ============ */
+
+/* 页面容器 */
+.page {
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+/* 卡片 */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space);
+  margin-bottom: var(--space);
+}
+
+/* 卡片标题 */
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: var(--space);
+}
+
+/* 区块标题 */
+.section-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: var(--space-sm);
+}
+
+/* 文字 */
+.text-1 { color: var(--text-1); }
+.text-2 { color: var(--text-2); }
+.text-3 { color: var(--text-3); }
+.text-primary { color: var(--primary-d); }
+.text-warning { color: var(--warning); }
+.text-danger { color: var(--danger); }
+
+.text-sm { font-size: 24rpx; }
+.text-lg { font-size: 32rpx; }
+.text-xl { font-size: 40rpx; }
+.text-bold { font-weight: 600; }
+
+/* 布局 */
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-1 { flex: 1; }
+.gap-sm { gap: 16rpx; }
+.gap { gap: 24rpx; }
+
+/* 主按钮 */
+.btn-primary {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), #9db89c);
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 600;
+  border-radius: var(--radius);
+  box-shadow: 0 8rpx 24rpx rgba(143, 166, 142, 0.25);
+  border: none;
+}
+
+.btn-primary:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+.btn-primary.disabled {
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+/* 次按钮 */
+.btn-ghost {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--primary-d);
+  font-size: 32rpx;
+  border: 2rpx solid var(--primary);
+  border-radius: var(--radius);
+}
+
+/* 标签 */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4rpx 16rpx;
+  font-size: 22rpx;
+  border-radius: var(--radius-full);
+  background: var(--primary-l);
+  color: var(--primary-d);
+}
+
+.tag-warning {
+  background: var(--warning-l);
+  color: var(--warning);
+}
+
+.tag-danger {
+  background: var(--danger-l);
+  color: var(--danger);
+}
+
+/* 空状态 */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 96rpx 0;
+}
+
+.empty-icon { font-size: 96rpx; opacity: 0.5; }
+.empty-text { margin-top: var(--space); font-size: 28rpx; color: var(--text-2); }
+.empty-desc { margin-top: 8rpx; font-size: 24rpx; color: var(--text-3); }
+
+/* 分隔线 */
+.divider {
+  height: 2rpx;
+  background: var(--divider);
+  margin: var(--space) 0;
+}
+
+/* 列表项 */
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28rpx 0;
+  border-bottom: 2rpx solid var(--divider);
+}
+
+.list-item:last-child { border-bottom: none; }
+
+.list-item-left {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  flex: 1;
+}
+
+.list-item-icon {
+  width: 64rpx;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--primary-l);
+  font-size: 32rpx;
+}
+
+.list-item-arrow {
+  font-size: 28rpx;
+  color: var(--text-3);
+}
+
+/* ============ 大字模式（适老化） ============ */
+/* ★ 原项目 monitor 页有这套 CSS 但 JSX 未挂载，这里挂上 */
+.elder-mode {
+  font-size: 160%;
+}
+
+.elder-mode .card-title { font-size: 44rpx; }
+.elder-mode .section-title { font-size: 48rpx; }
+.elder-mode .text-sm { font-size: 32rpx; }
+.elder-mode .text-lg { font-size: 44rpx; }
+.elder-mode .btn-primary { height: 128rpx; font-size: 44rpx; }
+.elder-mode .btn-ghost { height: 128rpx; font-size: 44rpx; }
+.elder-mode .list-item { padding: 40rpx 0; }
+.elder-mode .list-item-icon { width: 88rpx; height: 88rpx; font-size: 44rpx; }
+
+/* ============ 安全区适配 ============ */
+.safe-bottom {
+  padding-bottom: calc(var(--space-xl) + env(safe-area-inset-bottom));
+}
+
+/* tabBar 页面底部留白（避免内容被 tabBar 遮挡） */
+.tabbar-gap {
+  padding-bottom: 140rpx;
+}

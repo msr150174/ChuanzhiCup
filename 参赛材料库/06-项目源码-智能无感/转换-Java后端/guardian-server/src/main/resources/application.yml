@@ -1,0 +1,191 @@
+server:
+  port: ${SERVER_PORT:3000}
+  servlet:
+    context-path: /api
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: guardian-server
+
+  # ---------------- 数据源 ----------------
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # ★ characterEncoding 必须写 UTF-8，写 utf8mb4 会报 unsupported
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:znwg}?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:}
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  # ---------------- Redis ----------------
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      database: ${REDIS_DB:0}
+      timeout: 5000ms
+      lettuce:
+        pool:
+          max-active: 16
+          max-idle: 8
+          min-idle: 2
+
+  # ---------------- JSON ----------------
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+    default-property-inclusion: non_null
+
+# ---------------- MyBatis ----------------
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+  type-aliases-package: com.guardian.entity
+  mapper-locations: classpath*:mapper/**/*.xml
+
+# ---------------- 日志 ----------------
+logging:
+  level:
+    root: INFO
+    com.guardian: DEBUG
+    # SQL 日志（排查问题时打开）
+    com.guardian.mapper: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/guardian.log
+
+# ============================================================================
+# 业务配置
+# ============================================================================
+guardian:
+  # ---------------- 双 AI ----------------
+  ai:
+    # 总开关（与智跑校园同名，配一次两边生效）
+    enabled: ${AI_ENABLED:true}
+
+    # 路由顺序：Ollama(本地) → Coze(云端) → 规则库(兜底)
+    # 任何一层失败都自动降级，绝不向用户报错
+
+    # 本地模型（Ollama）
+    ollama:
+      enabled: ${OLLAMA_ENABLED:false}
+      base-url: ${OLLAMA_BASE_URL:}
+      model: ${OLLAMA_MODEL:}
+      timeout-seconds: 30
+
+    # 云端模型（Coze）
+    #
+    # ★ 与「智跑校园」共用同一个智能体：密钥、bot-id、环境变量名全部一致。
+    #   ⚠️ 旧的 Token 已失效（Coze 返回 4101），需要在 Coze 后台重新生成。
+    #   生成位置：https://www.coze.cn → 工作空间 → 个人访问令牌
+    coze:
+      enabled: ${COZE_ENABLED:true}
+      base-url: ${COZE_BASE_URL:https://api.coze.cn}
+      api-token: ${COZE_API_TOKEN:}
+      # ⚠️ 待确认：智跑校园用 7637945513727672363，智能无感原项目用 7644841783033528370
+      #    去 Coze 后台核对后统一填在这一个地方
+      bot-id: ${COZE_BOT_ID:}
+      # Coze 实测要 6-12 秒才出结果，8 秒会导致每次都降级到规则库
+      timeout-seconds: 25
+
+    # 响应缓存（减少重复调用）
+    cache:
+      enabled: true
+      ttl-seconds: 300
+
+  # ---------------- 健康评分权重 ----------------
+  health-score:
+    # 五项加权总分 100
+    weight:
+      sleep: 30        # 作息规律
+      medicine: 25     # 用药依从
+      exercise: 20     # 运动量
+      diet: 15         # 饮食均衡
+      monitor: 10      # 监测异常
+    # 睡眠时长评分区间（小时）
+    sleep:
+      optimal-min: 7
+      optimal-max: 9
+      acceptable-min: 6
+
+  # ---------------- SOS ----------------
+  sos:
+    # 长按触发秒数
+    long-press-seconds: 3
+    # 倒计时秒数
+    countdown-seconds: 3
+
+  # ---------------- 安全区 ----------------
+  safe-zone:
+    enabled: true
+    # 默认半径（米）
+    default-radius-meters: 500
+
+  # ---------------- 位置缓存 ----------------
+  location:
+    enabled: true
+    # 缓存有效期（秒）
+    cache-ttl-seconds: 60
+
+  # ---------------- 短信 ----------------
+  sms:
+    # 未配置云短信时，验证码打印到日志
+    dev-mode: ${SMS_DEV_MODE:true}
+    code-length: 6
+    # 验证码有效期（秒）
+    expire-seconds: 300
+    # 发送间隔（秒）
+    interval-seconds: 60
+
+  # ==========================================================================
+  # ★ 以下密钥与「智跑校园」共用同一套，环境变量名也保持一致，
+  #   在系统里配一次，两个项目都能读到。
+  #   所有值默认留空 —— 代码里绝不写死密钥。
+  # ==========================================================================
+
+  # ---------------- 微信小程序 ----------------
+  # ★ 全部值默认留空，必须通过环境变量注入（见 .env.example）。
+  wechat:
+    app-id: ${WX_APP_ID:}
+    app-secret: ${WX_APP_SECRET:}
+    # 订阅消息模板（长辈告警 / SOS 通知），未配置则跳过推送
+    tmpl-alert: ${WX_TMPL_ALERT:}
+    tmpl-sos: ${WX_TMPL_SOS:}
+
+  # ---------------- 腾讯位置服务 ----------------
+  tencent-map:
+    key: ${TENCENT_MAP_KEY:}
+    geocoder-url: https://apis.map.qq.com/ws/geocoder/v1/
+
+  # ---------------- 识图（OCR） ----------------
+  ocr:
+    # 未配置腾讯云密钥时自动跳过，只走 AI 分析，不报错
+    enabled: ${OCR_ENABLED:true}
+    # 每人每天识别次数上限
+    user-daily-limit: 20
+
+  # ---------------- 腾讯云（短信） ----------------
+  tencent-cloud:
+    secret-id: ${TENCENT_SECRET_ID:}
+    secret-key: ${TENCENT_SECRET_KEY:}
+    region: ${TENCENT_REGION:ap-guangzhou}
+    sms:
+      sdk-app-id: ${TENCENT_SMS_SDK_APP_ID:}
+      sign-name: ${TENCENT_SMS_SIGN_NAME:}
+      template-id: ${TENCENT_SMS_TEMPLATE_ID:}
+
+  # ---------------- JWT ----------------
+  jwt:
+    # 与智跑校园共用同一个密钥
+    secret: ${JWT_SECRET:}
+    expire-hours: 168

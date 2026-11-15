@@ -1,0 +1,58 @@
+{
+    "name":  "AI节律守护",
+    "appid":  "",
+    "description":  "智能无感健康守护 · 让家人安心每一天",
+    "versionName":  "1.0.0",
+    "versionCode":  "100",
+    "transformPx":  false,
+    "app-plus":  {
+                     "usingComponents":  true,
+                     "nvueStyleCompiler":  "uni-app",
+                     "compilerVersion":  3
+                 },
+    "quickapp":  {
+
+                 },
+    "mp-weixin":  {
+                      "appid":  "wxc9c6da82f1b21327",
+                      "setting":  {
+                                      "urlCheck":  false,
+                                      "es6":  true,
+                                      "enhance":  true,
+                                      "postcss":  true,
+                                      "minified":  true
+                                  },
+                      "usingComponents":  true,
+                      "permission":  {
+                                         "scope.userLocation":  {
+                                                                    "desc":  "用于记录长辈位置、判断是否离开安全区"
+                                                                },
+                                         "scope.record":  {
+                                                              "desc":  "用于语音健康监测与 SOS 语音求助"
+                                                          },
+                                         "scope.camera":  {
+                                                              "desc":  "用于拍照识别药品说明、体检报告"
+                                                          },
+                                         "scope.writePhotosAlbum":  {
+                                                                        "desc":  "用于保存健康报告图片"
+                                                                    }
+                                     },
+                      "requiredPrivateInfos":  [
+                                                   "getLocation",
+                                                   "chooseLocation"
+                                               ]
+                  },
+    "mp-alipay":  {
+                      "usingComponents":  true
+                  },
+    "mp-baidu":  {
+                     "usingComponents":  true
+                 },
+    "mp-toutiao":  {
+                       "usingComponents":  true
+                   },
+    "uniStatistics":  {
+                          "enable":  false
+                      },
+    "vueVersion":  "3"
+}

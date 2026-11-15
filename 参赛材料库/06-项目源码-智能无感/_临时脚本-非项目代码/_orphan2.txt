@@ -1,0 +1,43 @@
+  运行中进程的目录: 102 个
+
+  注册表安装路径: 278 条
+
+==============================================================================
+  疑似卸载残留（有程序文件，但注册表无记录、进程未运行）
+==============================================================================
+
+   44,439.6 MB   exe=160  dll=568    D:\AI音乐
+   37,390.8 MB   exe=5    dll=1      D:\临时文件
+   20,151.6 MB   exe=128  dll=2299   D:\办公软件集合
+   19,067.1 MB   exe=185  dll=580    D:\BaiduNetdiskDownload
+   17,956.2 MB   exe=406  dll=408    D:\Qwen3 TTS
+   14,068.8 MB   exe=130  dll=236    D:\Comfy-Desktop
+    3,820.7 MB   exe=419  dll=419    D:\VCPchat
+    2,994.6 MB   exe=42   dll=74     C:\Program Files\JetBrains
+    2,752.7 MB   exe=408  dll=1530   D:\SDK
+    2,676.0 MB   exe=75   dll=174    D:\VirtuslEnvironment
+    1,348.9 MB   exe=8    dll=0      D:\运行文件
+    1,197.3 MB   exe=90   dll=0      D:\newapi
+      762.5 MB   exe=6    dll=0      D:\工具集
+      715.6 MB   exe=2    dll=0      D:\智跑校园
+      572.2 MB   exe=2    dll=7      D:\PCL 正式版 2.10.9
+      508.0 MB   exe=2    dll=2      D:\qq
+      447.6 MB   exe=12   dll=84     D:\kugo
+      418.2 MB   exe=13   dll=254    C:\Program Files (x86)\NVIDIA Corporation
+      308.4 MB   exe=4    dll=746    C:\Program Files\Steam++
+      235.5 MB   exe=10   dll=0      D:\Program Files\Go
+      116.1 MB   exe=8    dll=13     D:\压缩
+       72.5 MB   exe=10   dll=54     C:\Program Files (x86)\EVCapture
+       64.3 MB   exe=21   dll=38     C:\Program Files\MuMuVMMVbox
+       55.4 MB   exe=6    dll=21     C:\Program Files (x86)\Baidu
+       41.9 MB   exe=55   dll=17     C:\Program Files (x86)\Microsoft SDKs
+       26.7 MB   exe=2    dll=13     D:\Bongo Cat Mver爱音
+       24.1 MB   exe=2    dll=0      D:\c++
+       18.7 MB   exe=1    dll=0      D:\cpolar
+       12.9 MB   exe=2    dll=0      D:\QQFile
+       10.2 MB   exe=2    dll=0      C:\Program Files\Microsoft Office 15
+        7.1 MB   exe=5    dll=9      C:\Program Files (x86)\Tencent
+
+==============================================================================
+  合计 31 个可疑目录
+==============================================================================

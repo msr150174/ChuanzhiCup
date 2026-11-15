@@ -1,0 +1,3625 @@
+{
+  "id": "proj6717b5c229",
+  "name": "guardian-admin",
+  "title": "AI 节律守护 · 后台管理",
+  "description": "老年人健康守护小程序的管理后台",
+  "platform": "web",
+  "version": "1.0.0",
+  "pages": [
+    {
+      "id": "pc7c737470c",
+      "name": "login",
+      "title": "登录",
+      "type": "page",
+      "dir": false,
+      "children": [],
+      "raw": false,
+      "pure": false,
+      "hidden": false,
+      "layout": "独立布局",
+      "cache": true,
+      "meta": {
+        "path": "/login",
+        "layout": "独立布局"
+      },
+      "dsl": {
+        "id": "b830ec21af8",
+        "name": "login",
+        "version": "1.0.0",
+        "platform": "web",
+        "nodes": [
+          {
+            "id": "n1d10720b99",
+            "name": "ElCard",
+            "from": "ElCard",
+            "props": {
+              "class": "login-card",
+              "shadow": "always"
+            },
+            "events": {},
+            "directives": [],
+            "children": [
+              {
+                "id": "ndc4d0023d7",
+                "name": "div",
+                "from": "div",
+                "props": {
+                  "class": "logo"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "nea5833b93b",
+                    "name": "text",
+                    "from": "text",
+                    "props": {
+                      "content": "🌿"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "nc23c06f46d",
+                "name": "h2",
+                "from": "h2",
+                "props": {
+                  "class": "title",
+                  "style": "text-align:center"
+                },
+                "events": {},
+                "directives": [],
+                "children": "AI 节律守护 · 运营管理后台"
+              },
+              {
+                "id": "n6501b6042c",
+                "name": "ElForm",
+                "from": "ElForm",
+                "props": {
+                  "model": "form",
+                  "labelPosition": "top"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "n830473d814",
+                    "name": "ElFormItem",
+                    "from": "ElFormItem",
+                    "props": {
+                      "label": "手机号"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "ne8e02fd63b",
+                        "name": "ElInput",
+                        "from": "ElInput",
+                        "props": {
+                          "v-model": "form.phone",
+                          "placeholder": "请输入手机号",
+                          "maxlength": 11,
+                          "clearable": true
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n80a8749199",
+                    "name": "ElFormItem",
+                    "from": "ElFormItem",
+                    "props": {
+                      "label": "验证码"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "necb37957eb",
+                        "name": "div",
+                        "from": "div",
+                        "props": {
+                          "class": "code-row"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n8a5aadc196",
+                            "name": "ElInput",
+                            "from": "ElInput",
+                            "props": {
+                              "v-model": "form.code",
+                              "placeholder": "请输入验证码",
+                              "maxlength": 6
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": []
+                          },
+                          {
+                            "id": "nd08f4db0d0",
+                            "name": "ElButton",
+                            "from": "ElButton",
+                            "props": {
+                              "type": "primary",
+                              "plain": true,
+                              ":disabled": "!phoneValid || counting",
+                              "@click": "sendCode"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": "获取验证码"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n0c428aa3e3",
+                    "name": "ElButton",
+                    "from": "ElButton",
+                    "props": {
+                      "type": "primary",
+                      ":loading": "submitting",
+                      "style": "width:100%",
+                      "@click": "submit"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": "登 录"
+                  },
+                  {
+                    "id": "n889f567bf9",
+                    "name": "p",
+                    "from": "p",
+                    "props": {
+                      "class": "note"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": "⚠️ 仅管理员可登录"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "css": "",
+        "props": [],
+        "emits": [],
+        "slots": []
+      }
+    },
+    {
+      "id": "p95d710046c",
+      "name": "dashboard",
+      "title": "数据总览",
+      "type": "page",
+      "dir": false,
+      "children": [],
+      "raw": false,
+      "pure": false,
+      "hidden": false,
+      "layout": "AdminLayout",
+      "cache": true,
+      "meta": {
+        "path": "/dashboard",
+        "layout": "AdminLayout"
+      },
+      "dsl": {
+        "id": "b186d05df23",
+        "name": "dashboard",
+        "version": "1.0.0",
+        "platform": "web",
+        "nodes": [
+          {
+            "id": "n72ac8fc958",
+            "name": "div",
+            "from": "div",
+            "props": {
+              "class": "page-dashboard"
+            },
+            "events": {},
+            "directives": [],
+            "children": [
+              {
+                "id": "nb7e6d5aa3c",
+                "name": "ElRow",
+                "from": "ElRow",
+                "props": {
+                  ":gutter": 16
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "ne80aea5ad3",
+                    "name": "ElCol",
+                    "from": "ElCol",
+                    "props": {
+                      ":span": 6
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n7d7dce038b",
+                        "name": "ElCard",
+                        "from": "ElCard",
+                        "props": {
+                          "class": "stat-card",
+                          "shadow": "hover"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n94c041e920",
+                            "name": "div",
+                            "from": "div",
+                            "props": {
+                              "class": "stat-inner"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n1175f59598",
+                                "name": "ElIcon",
+                                "from": "ElIcon",
+                                "props": {
+                                  "class": "stat-icon",
+                                  "style": "color:#8FA68E"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n6dfa2a025a",
+                                    "name": "component",
+                                    "from": "component",
+                                    "props": {
+                                      ":is": "User"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "n1aaf9a578c",
+                                "name": "div",
+                                "from": "div",
+                                "props": {
+                                  "class": "stat-text"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n51c33e5c74",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-label"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "用户总数"
+                                  },
+                                  {
+                                    "id": "n9d4ff3400a",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-value"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "{{ overview.totalUsers }}"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n8b631b6c2d",
+                    "name": "ElCol",
+                    "from": "ElCol",
+                    "props": {
+                      ":span": 6
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n474e8aee66",
+                        "name": "ElCard",
+                        "from": "ElCard",
+                        "props": {
+                          "class": "stat-card",
+                          "shadow": "hover"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n8a68155382",
+                            "name": "div",
+                            "from": "div",
+                            "props": {
+                              "class": "stat-inner"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n9c6de47898",
+                                "name": "ElIcon",
+                                "from": "ElIcon",
+                                "props": {
+                                  "class": "stat-icon",
+                                  "style": "color:#5B9A7A"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n5db04cf833",
+                                    "name": "component",
+                                    "from": "component",
+                                    "props": {
+                                      ":is": "Avatar"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "nb183e3b0cb",
+                                "name": "div",
+                                "from": "div",
+                                "props": {
+                                  "class": "stat-text"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "ne80a7e802c",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-label"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "长辈用户"
+                                  },
+                                  {
+                                    "id": "nf6ab10d393",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-value"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "{{ overview.elders }}"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n32d1935435",
+                    "name": "ElCol",
+                    "from": "ElCol",
+                    "props": {
+                      ":span": 6
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n878e579385",
+                        "name": "ElCard",
+                        "from": "ElCard",
+                        "props": {
+                          "class": "stat-card",
+                          "shadow": "hover"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "ncefe08ca14",
+                            "name": "div",
+                            "from": "div",
+                            "props": {
+                              "class": "stat-inner"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n4b0197e9d0",
+                                "name": "ElIcon",
+                                "from": "ElIcon",
+                                "props": {
+                                  "class": "stat-icon",
+                                  "style": "color:#8FA68E"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n4df66f7b2e",
+                                    "name": "component",
+                                    "from": "component",
+                                    "props": {
+                                      ":is": "UserFilled"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "n67511bc6fd",
+                                "name": "div",
+                                "from": "div",
+                                "props": {
+                                  "class": "stat-text"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n6fe1fe90e9",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-label"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "家属用户"
+                                  },
+                                  {
+                                    "id": "n74f50ba1f8",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-value"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "{{ overview.families }}"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n51d75dd0b0",
+                    "name": "ElCol",
+                    "from": "ElCol",
+                    "props": {
+                      ":span": 6
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n5f18532d53",
+                        "name": "ElCard",
+                        "from": "ElCard",
+                        "props": {
+                          "class": "stat-card",
+                          "shadow": "hover"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n2064191b08",
+                            "name": "div",
+                            "from": "div",
+                            "props": {
+                              "class": "stat-inner"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n5c2f5a4738",
+                                "name": "ElIcon",
+                                "from": "ElIcon",
+                                "props": {
+                                  "class": "stat-icon",
+                                  "style": "color:#5B9A7A"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "nc1f7b6ef4a",
+                                    "name": "component",
+                                    "from": "component",
+                                    "props": {
+                                      ":is": "TrendCharts"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "nd717547406",
+                                "name": "div",
+                                "from": "div",
+                                "props": {
+                                  "class": "stat-text"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "ndd77518a29",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-label"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "本周新增"
+                                  },
+                                  {
+                                    "id": "n444d9cffb5",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-value"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "{{ overview.newThisWeek }}"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "n69eb20d14f",
+                "name": "ElRow",
+                "from": "ElRow",
+                "props": {
+                  ":gutter": 16,
+                  "style": "margin-top:16px"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "n8e1db44384",
+                    "name": "ElCol",
+                    "from": "ElCol",
+                    "props": {
+                      ":span": 8
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n1bd7d9d08b",
+                        "name": "ElCard",
+                        "from": "ElCard",
+                        "props": {
+                          "class": "stat-card",
+                          "shadow": "hover"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n4182c0b6d1",
+                            "name": "div",
+                            "from": "div",
+                            "props": {
+                              "class": "stat-inner"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n4303a06496",
+                                "name": "ElIcon",
+                                "from": "ElIcon",
+                                "props": {
+                                  "class": "stat-icon",
+                                  "style": "color:#E55A5A"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n660bbea1ba",
+                                    "name": "component",
+                                    "from": "component",
+                                    "props": {
+                                      ":is": "Bell"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "n5027ac78d7",
+                                "name": "div",
+                                "from": "div",
+                                "props": {
+                                  "class": "stat-text"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n82c4f1aa6a",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-label"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "近 7 天告警"
+                                  },
+                                  {
+                                    "id": "n3c23471f3a",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-value"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "{{ overview.weekAlerts }}"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nb8e6bd8b85",
+                    "name": "ElCol",
+                    "from": "ElCol",
+                    "props": {
+                      ":span": 8
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n87b45c4026",
+                        "name": "ElCard",
+                        "from": "ElCard",
+                        "props": {
+                          "class": "stat-card",
+                          "shadow": "hover"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "nbb5ccc4277",
+                            "name": "div",
+                            "from": "div",
+                            "props": {
+                              "class": "stat-inner"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n3e7b3a3486",
+                                "name": "ElIcon",
+                                "from": "ElIcon",
+                                "props": {
+                                  "class": "stat-icon",
+                                  "style": "color:#8FA68E"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n57171c1d3d",
+                                    "name": "component",
+                                    "from": "component",
+                                    "props": {
+                                      ":is": "Calendar"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "n41543442df",
+                                "name": "div",
+                                "from": "div",
+                                "props": {
+                                  "class": "stat-text"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n04a0801df6",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-label"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "今日打卡"
+                                  },
+                                  {
+                                    "id": "n32f47a69e0",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-value"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "{{ overview.todayCheckins }}"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n3bbf70c3be",
+                    "name": "ElCol",
+                    "from": "ElCol",
+                    "props": {
+                      ":span": 8
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n9e7327f37d",
+                        "name": "ElCard",
+                        "from": "ElCard",
+                        "props": {
+                          "class": "stat-card",
+                          "shadow": "hover"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "nadd443e473",
+                            "name": "div",
+                            "from": "div",
+                            "props": {
+                              "class": "stat-inner"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n4ff59ca1c8",
+                                "name": "ElIcon",
+                                "from": "ElIcon",
+                                "props": {
+                                  "class": "stat-icon",
+                                  "style": "color:#7D746B"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "nbdb80cf978",
+                                    "name": "component",
+                                    "from": "component",
+                                    "props": {
+                                      ":is": "Setting"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "n4eef4e5008",
+                                "name": "div",
+                                "from": "div",
+                                "props": {
+                                  "class": "stat-text"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": [
+                                  {
+                                    "id": "n18c1e65aad",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-label"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "管理员数"
+                                  },
+                                  {
+                                    "id": "n086cc21324",
+                                    "name": "div",
+                                    "from": "div",
+                                    "props": {
+                                      "class": "stat-value"
+                                    },
+                                    "events": {},
+                                    "directives": [],
+                                    "children": "{{ overview.admins }}"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "nea4b22e3ff",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {
+                  "style": "margin-top:16px"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "n15d14a651d",
+                    "name": "template",
+                    "from": "template",
+                    "props": {
+                      "#header": ""
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "nb7cdece7e3",
+                        "name": "span",
+                        "from": "span",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": "近 7 天趋势"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n1d9f251556",
+                    "name": "div",
+                    "from": "div",
+                    "props": {
+                      "ref": "chartRef",
+                      "style": "height:320px"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "css": "",
+        "props": [],
+        "emits": [],
+        "slots": []
+      }
+    },
+    {
+      "id": "p3ceead133a",
+      "name": "users",
+      "title": "用户管理",
+      "type": "page",
+      "dir": false,
+      "children": [],
+      "raw": false,
+      "pure": false,
+      "hidden": false,
+      "layout": "AdminLayout",
+      "cache": true,
+      "meta": {
+        "path": "/users",
+        "layout": "AdminLayout"
+      },
+      "dsl": {
+        "id": "bdf7791b606",
+        "name": "users",
+        "version": "1.0.0",
+        "platform": "web",
+        "nodes": [
+          {
+            "id": "nc2c7f12eb5",
+            "name": "div",
+            "from": "div",
+            "props": {
+              "class": "page-users"
+            },
+            "events": {},
+            "directives": [],
+            "children": [
+              {
+                "id": "n3e50a57236",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {},
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "ne6157b3b01",
+                    "name": "ElForm",
+                    "from": "ElForm",
+                    "props": {
+                      ":inline": true,
+                      "model": "query"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "ne83147db7d",
+                        "name": "ElFormItem",
+                        "from": "ElFormItem",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n5e31f9f676",
+                            "name": "ElInput",
+                            "from": "ElInput",
+                            "props": {
+                              "v-model": "query.keyword",
+                              "placeholder": "搜索手机号或姓名",
+                              "clearable": true
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "n308ec64147",
+                        "name": "ElFormItem",
+                        "from": "ElFormItem",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n797286749c",
+                            "name": "ElSelect",
+                            "from": "ElSelect",
+                            "props": {
+                              "v-model": "query.role",
+                              "placeholder": "全部角色",
+                              "clearable": true
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n07976e070a",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "长辈",
+                                  "value": "elder"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              },
+                              {
+                                "id": "n9a3f5a3572",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "家属",
+                                  "value": "family"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "nf90e892c20",
+                        "name": "ElFormItem",
+                        "from": "ElFormItem",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "nd3bd3325ce",
+                            "name": "ElSelect",
+                            "from": "ElSelect",
+                            "props": {
+                              "v-model": "query.isAdmin",
+                              "placeholder": "全部身份",
+                              "clearable": true
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n1f7918a344",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "管理员",
+                                  ":value": true
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              },
+                              {
+                                "id": "n13924f1b5c",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "普通用户",
+                                  ":value": false
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "neecf211194",
+                        "name": "ElFormItem",
+                        "from": "ElFormItem",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n1c01d411a2",
+                            "name": "ElButton",
+                            "from": "ElButton",
+                            "props": {
+                              "type": "primary",
+                              "@click": "search"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": "查询"
+                          },
+                          {
+                            "id": "n511b37b753",
+                            "name": "ElButton",
+                            "from": "ElButton",
+                            "props": {
+                              "@click": "reset"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": "重置"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "nefdf6533bc",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {
+                  "style": "margin-top:16px"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "ne7f2851b3b",
+                    "name": "ElTable",
+                    "from": "ElTable",
+                    "props": {
+                      ":data": "list",
+                      "v-loading": "loading",
+                      "stripe": true
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n20b985f6ee",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "name",
+                          "label": "姓名",
+                          "width": 120
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "n66d2391e00",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "phone",
+                          "label": "手机号",
+                          "width": 140
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "ncef00ee34e",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "role",
+                          "label": "角色",
+                          "width": 100
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n71198254e4",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#default": "scope"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n562f940a56",
+                                "name": "ElTag",
+                                "from": "ElTag",
+                                "props": {
+                                  ":type": "scope.row.role === 'elder' ? 'success' : 'primary'"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "{{ scope.row.role === 'elder' ? '长辈' : '家属' }}"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "n851064a02c",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "isAdmin",
+                          "label": "身份",
+                          "width": 100
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n19df2cd3ac",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#default": "scope"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "nd4ede14cf7",
+                                "name": "ElTag",
+                                "from": "ElTag",
+                                "props": {
+                                  ":type": "scope.row.isAdmin ? 'danger' : 'info'"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "{{ scope.row.isAdmin ? '管理员' : '普通' }}"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "neec9675301",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "isActive",
+                          "label": "状态",
+                          "width": 90
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n1e301e08b5",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#default": "scope"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n9223e52f5e",
+                                "name": "ElTag",
+                                "from": "ElTag",
+                                "props": {
+                                  ":type": "scope.row.isActive ? 'success' : 'info'"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "{{ scope.row.isActive ? '启用' : '禁用' }}"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "n49220cccda",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "createTime",
+                          "label": "注册时间",
+                          "width": 170
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nf1c5ba5981",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "label": "操作",
+                          "width": 260,
+                          "fixed": "right"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "nea3bea228a",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#default": "scope"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n8f496559ca",
+                                "name": "ElButton",
+                                "from": "ElButton",
+                                "props": {
+                                  "size": "small",
+                                  "@click": "openDetail(scope.row)"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "详情"
+                              },
+                              {
+                                "id": "n1b374f395a",
+                                "name": "ElButton",
+                                "from": "ElButton",
+                                "props": {
+                                  ":size": "small",
+                                  "type": "warning",
+                                  "v-if": "!scope.row.isAdmin",
+                                  "@click": "setAdmin(scope.row, true)"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "设为管理员"
+                              },
+                              {
+                                "id": "n320c25db83",
+                                "name": "ElButton",
+                                "from": "ElButton",
+                                "props": {
+                                  ":size": "small",
+                                  "type": "info",
+                                  "v-if": "scope.row.isAdmin",
+                                  "@click": "setAdmin(scope.row, false)"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "取消管理员"
+                              },
+                              {
+                                "id": "n2ea6fff2fd",
+                                "name": "ElButton",
+                                "from": "ElButton",
+                                "props": {
+                                  ":size": "small",
+                                  "type": "danger",
+                                  "v-if": "scope.row.isActive",
+                                  "@click": "setActive(scope.row, false)"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "禁用"
+                              },
+                              {
+                                "id": "n62606de891",
+                                "name": "ElButton",
+                                "from": "ElButton",
+                                "props": {
+                                  ":size": "small",
+                                  "type": "success",
+                                  "v-if": "!scope.row.isActive",
+                                  "@click": "setActive(scope.row, true)"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "启用"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n9f5104e070",
+                    "name": "ElPagination",
+                    "from": "ElPagination",
+                    "props": {
+                      "style": "margin-top:16px;justify-content:flex-end",
+                      ":current-page": "page",
+                      ":page-size": "pageSize",
+                      ":total": "total",
+                      "layout": "total, sizes, prev, pager, next, jumper",
+                      "@current-change": "onPageChange"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "n79b822f554",
+                "name": "ElDialog",
+                "from": "ElDialog",
+                "props": {
+                  "v-model": "detailVisible",
+                  "title": "用户详情",
+                  "width": "640px"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "n8d8b4efcb4",
+                    "name": "ElDescriptions",
+                    "from": "ElDescriptions",
+                    "props": {
+                      ":column": 2,
+                      "border": true
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n55358190b9",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "姓名"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ detail.name }}"
+                      },
+                      {
+                        "id": "ne52747254c",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "手机号"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ detail.phone }}"
+                      },
+                      {
+                        "id": "n2786d9f025",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "角色"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ detail.role }}"
+                      },
+                      {
+                        "id": "n3e71199e30",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "近 30 天打卡"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ detail.checkinDays }} 天"
+                      },
+                      {
+                        "id": "n5f222a5a55",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "绑定设备"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ detail.deviceCount }} 台"
+                      },
+                      {
+                        "id": "nb45cace889",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "未处理告警"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ detail.unhandledAlerts }} 条"
+                      },
+                      {
+                        "id": "nd12c04ecc8",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "注册时间"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ detail.createTime }}"
+                      },
+                      {
+                        "id": "n9f4504d039",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "地址"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ detail.address }}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "css": "",
+        "props": [],
+        "emits": [],
+        "slots": []
+      }
+    },
+    {
+      "id": "pb0b3cda328",
+      "name": "alerts",
+      "title": "告警处置",
+      "type": "page",
+      "dir": false,
+      "children": [],
+      "raw": false,
+      "pure": false,
+      "hidden": false,
+      "layout": "AdminLayout",
+      "cache": true,
+      "meta": {
+        "path": "/alerts",
+        "layout": "AdminLayout"
+      },
+      "dsl": {
+        "id": "b33ec116dc2",
+        "name": "alerts",
+        "version": "1.0.0",
+        "platform": "web",
+        "nodes": [
+          {
+            "id": "n3890e2f42a",
+            "name": "div",
+            "from": "div",
+            "props": {
+              "class": "page-alerts"
+            },
+            "events": {},
+            "directives": [],
+            "children": [
+              {
+                "id": "nbb6f9656b7",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {},
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "nc35c4167a1",
+                    "name": "ElForm",
+                    "from": "ElForm",
+                    "props": {
+                      ":inline": true,
+                      "model": "query"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "ne3dc8f07bd",
+                        "name": "ElFormItem",
+                        "from": "ElFormItem",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n6980679615",
+                            "name": "ElSelect",
+                            "from": "ElSelect",
+                            "props": {
+                              "v-model": "query.handled",
+                              "placeholder": "全部状态",
+                              "clearable": true
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "nf5a406be7d",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "未处理",
+                                  ":value": false
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              },
+                              {
+                                "id": "n99dc6cd8d4",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "已处理",
+                                  ":value": true
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "ne3d9cb1f85",
+                        "name": "ElFormItem",
+                        "from": "ElFormItem",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n5c9b238944",
+                            "name": "ElSelect",
+                            "from": "ElSelect",
+                            "props": {
+                              "v-model": "query.severity",
+                              "placeholder": "全部级别",
+                              "clearable": true
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n2684578217",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "紧急",
+                                  "value": "critical"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              },
+                              {
+                                "id": "n4a926dab28",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "高",
+                                  "value": "high"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              },
+                              {
+                                "id": "n0a00952945",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "中",
+                                  "value": "medium"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              },
+                              {
+                                "id": "n63422a4086",
+                                "name": "ElOption",
+                                "from": "ElOption",
+                                "props": {
+                                  "label": "低",
+                                  "value": "low"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "nc35210e41c",
+                        "name": "ElFormItem",
+                        "from": "ElFormItem",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n926e982f75",
+                            "name": "ElButton",
+                            "from": "ElButton",
+                            "props": {
+                              "type": "primary",
+                              "@click": "search"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": "查询"
+                          },
+                          {
+                            "id": "nc12f5130bb",
+                            "name": "ElButton",
+                            "from": "ElButton",
+                            "props": {
+                              "@click": "reset"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": "重置"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "n137635be09",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {
+                  "style": "margin-top:16px"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "nca1c88d0df",
+                    "name": "ElTable",
+                    "from": "ElTable",
+                    "props": {
+                      ":data": "list",
+                      "v-loading": "loading",
+                      ":row-class-name": "rowClass"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "nbeb7d89ca2",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "severity",
+                          "label": "级别",
+                          "width": 90
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "nef7cf05037",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#default": "scope"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n36b735ba23",
+                                "name": "ElTag",
+                                "from": "ElTag",
+                                "props": {
+                                  ":type": "severityType(scope.row.severity)"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "{{ severityText(scope.row.severity) }}"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "n713697f63b",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "alertType",
+                          "label": "类型",
+                          "width": 110
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nb5938f5448",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "title",
+                          "label": "标题",
+                          "minWidth": 160
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "n9e3f940299",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "description",
+                          "label": "描述",
+                          "minWidth": 220,
+                          "showOverflowTooltip": true
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nf75364d400",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "userName",
+                          "label": "用户",
+                          "width": 110
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nd6da11085b",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "userPhone",
+                          "label": "手机号",
+                          "width": 130
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nbed3d5f317",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "occurredAt",
+                          "label": "发生时间",
+                          "width": 170
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "n4e294ef8df",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "handled",
+                          "label": "状态",
+                          "width": 90
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n0e1c2ee8f2",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#default": "scope"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n2dfae77f36",
+                                "name": "ElTag",
+                                "from": "ElTag",
+                                "props": {
+                                  ":type": "scope.row.handled ? 'success' : 'danger'"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "{{ scope.row.handled ? '已处理' : '未处理' }}"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "n119e852ecf",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "label": "操作",
+                          "width": 120,
+                          "fixed": "right"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n31f47c0f7b",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#default": "scope"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n772af09e40",
+                                "name": "ElButton",
+                                "from": "ElButton",
+                                "props": {
+                                  "size": "small",
+                                  "type": "primary",
+                                  "v-if": "!scope.row.handled",
+                                  "@click": "openHandle(scope.row)"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "处理"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n0cac3db603",
+                    "name": "ElPagination",
+                    "from": "ElPagination",
+                    "props": {
+                      "style": "margin-top:16px;justify-content:flex-end",
+                      ":current-page": "page",
+                      ":page-size": "pageSize",
+                      ":total": "total",
+                      "layout": "total, prev, pager, next",
+                      "@current-change": "onPageChange"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "nb8333467f0",
+                "name": "ElDialog",
+                "from": "ElDialog",
+                "props": {
+                  "v-model": "handleVisible",
+                  "title": "处理告警",
+                  "width": "480px"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "n3d092dabd6",
+                    "name": "ElDescriptions",
+                    "from": "ElDescriptions",
+                    "props": {
+                      ":column": 1,
+                      "border": true
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n795d89a557",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "告警标题"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ current.title }}"
+                      },
+                      {
+                        "id": "n15e889ca83",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "用户"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ current.userName }}"
+                      },
+                      {
+                        "id": "n4ee39a4053",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "发生时间"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ current.occurredAt }}"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "na89517abd9",
+                    "name": "ElInput",
+                    "from": "ElInput",
+                    "props": {
+                      "style": "margin-top:16px",
+                      "v-model": "notes",
+                      "type": "textarea",
+                      ":rows": 3,
+                      "placeholder": "例如：已电话联系家属，确认老人安全"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": []
+                  },
+                  {
+                    "id": "nd80ed6cbf5",
+                    "name": "template",
+                    "from": "template",
+                    "props": {
+                      "#footer": ""
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n130dcf6485",
+                        "name": "ElButton",
+                        "from": "ElButton",
+                        "props": {
+                          "@click": "handleVisible = false"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "取消"
+                      },
+                      {
+                        "id": "nf9366ec18a",
+                        "name": "ElButton",
+                        "from": "ElButton",
+                        "props": {
+                          "type": "primary",
+                          "@click": "confirmHandle"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "确认处理"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "css": "",
+        "props": [],
+        "emits": [],
+        "slots": []
+      }
+    },
+    {
+      "id": "p36a42f1020",
+      "name": "feedback",
+      "title": "反馈处理",
+      "type": "page",
+      "dir": false,
+      "children": [],
+      "raw": false,
+      "pure": false,
+      "hidden": false,
+      "layout": "AdminLayout",
+      "cache": true,
+      "meta": {
+        "path": "/feedback",
+        "layout": "AdminLayout"
+      },
+      "dsl": {
+        "id": "bff9dcf4717",
+        "name": "feedback",
+        "version": "1.0.0",
+        "platform": "web",
+        "nodes": [
+          {
+            "id": "nb4e6b8849e",
+            "name": "div",
+            "from": "div",
+            "props": {
+              "class": "page-feedback"
+            },
+            "events": {},
+            "directives": [],
+            "children": [
+              {
+                "id": "n4f78e18a19",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {},
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "nb3e97f74d8",
+                    "name": "ElTable",
+                    "from": "ElTable",
+                    "props": {
+                      ":data": "list",
+                      "v-loading": "loading"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n6ff00ef39c",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "userName",
+                          "label": "用户",
+                          "width": 110
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "ned33f3e76e",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "userPhone",
+                          "label": "手机号",
+                          "width": 130
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nb3f44b48fb",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "title",
+                          "label": "标题",
+                          "width": 160
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "n0db7ac7e81",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "content",
+                          "label": "内容",
+                          "minWidth": 260,
+                          "showOverflowTooltip": true
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "n95f6a5fcdf",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "severity",
+                          "label": "评分",
+                          "width": 80
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "n6d97c94630",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "createTime",
+                          "label": "提交时间",
+                          "width": 170
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "n74efabe2c1",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "handled",
+                          "label": "状态",
+                          "width": 90
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "nec7c684d1e",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#default": "scope"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n8a7f3748ab",
+                                "name": "ElTag",
+                                "from": "ElTag",
+                                "props": {
+                                  ":type": "scope.row.handled ? 'success' : 'warning'"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "{{ scope.row.handled ? '已回复' : '待回复' }}"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "ndc45728c8e",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "label": "操作",
+                          "width": 120,
+                          "fixed": "right"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n0858628f7d",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#default": "scope"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n68f78618ea",
+                                "name": "ElButton",
+                                "from": "ElButton",
+                                "props": {
+                                  "size": "small",
+                                  "type": "primary",
+                                  "v-if": "!scope.row.handled",
+                                  "@click": "openReply(scope.row)"
+                                },
+                                "events": {},
+                                "directives": [],
+                                "children": "回复"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n08ec5a377a",
+                    "name": "ElPagination",
+                    "from": "ElPagination",
+                    "props": {
+                      "style": "margin-top:16px;justify-content:flex-end",
+                      ":current-page": "page",
+                      ":page-size": "pageSize",
+                      ":total": "total",
+                      "layout": "total, prev, pager, next",
+                      "@current-change": "onPageChange"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "n9d2c542592",
+                "name": "ElDialog",
+                "from": "ElDialog",
+                "props": {
+                  "v-model": "replyVisible",
+                  "title": "回复反馈",
+                  "width": "480px"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "n75364260d5",
+                    "name": "ElDescriptions",
+                    "from": "ElDescriptions",
+                    "props": {
+                      ":column": 1,
+                      "border": true
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "nda43e7564c",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "用户"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ current.userName }}"
+                      },
+                      {
+                        "id": "n1ea0c9fc9a",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "反馈内容"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ current.content }}"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n76b47bbeef",
+                    "name": "ElInput",
+                    "from": "ElInput",
+                    "props": {
+                      "style": "margin-top:16px",
+                      "v-model": "reply",
+                      "type": "textarea",
+                      ":rows": 4,
+                      "placeholder": "请输入回复内容"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": []
+                  },
+                  {
+                    "id": "n88c8384706",
+                    "name": "template",
+                    "from": "template",
+                    "props": {
+                      "#footer": ""
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n2af5e38b39",
+                        "name": "ElButton",
+                        "from": "ElButton",
+                        "props": {
+                          "@click": "replyVisible = false"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "取消"
+                      },
+                      {
+                        "id": "n5a2595f073",
+                        "name": "ElButton",
+                        "from": "ElButton",
+                        "props": {
+                          "type": "primary",
+                          "@click": "confirmReply"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "提交回复"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "css": "",
+        "props": [],
+        "emits": [],
+        "slots": []
+      }
+    },
+    {
+      "id": "p86b3534727",
+      "name": "devices",
+      "title": "设备管理",
+      "type": "page",
+      "dir": false,
+      "children": [],
+      "raw": false,
+      "pure": false,
+      "hidden": false,
+      "layout": "AdminLayout",
+      "cache": true,
+      "meta": {
+        "path": "/devices",
+        "layout": "AdminLayout"
+      },
+      "dsl": {
+        "id": "bd68db461b2",
+        "name": "devices",
+        "version": "1.0.0",
+        "platform": "web",
+        "nodes": [
+          {
+            "id": "n0aa303a61d",
+            "name": "div",
+            "from": "div",
+            "props": {
+              "class": "page-devices"
+            },
+            "events": {},
+            "directives": [],
+            "children": [
+              {
+                "id": "n0db8f14223",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {},
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "n154a7f14f2",
+                    "name": "template",
+                    "from": "template",
+                    "props": {
+                      "#header": ""
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "nb7e73398f4",
+                        "name": "span",
+                        "from": "span",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": "设备列表"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "ncf052674c8",
+                    "name": "ElTable",
+                    "from": "ElTable",
+                    "props": {
+                      ":data": "list",
+                      "v-loading": "loading",
+                      "stripe": true
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n7a891b6ee4",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "deviceName",
+                          "label": "设备名称",
+                          "width": 160
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nb585122a86",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "deviceType",
+                          "label": "类型",
+                          "width": 120
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nc8685d4451",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "userName",
+                          "label": "所属用户",
+                          "width": 120
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "n5a13bf298e",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "userId",
+                          "label": "用户ID",
+                          "minWidth": 200
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nccf6c5f858",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "status",
+                          "label": "状态",
+                          "width": 100
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "n8d57684b06",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "lastSync",
+                          "label": "最后同步",
+                          "width": 170
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      },
+                      {
+                        "id": "nee9582c70a",
+                        "name": "ElTableColumn",
+                        "from": "ElTableColumn",
+                        "props": {
+                          "prop": "createTime",
+                          "label": "绑定时间",
+                          "width": 170
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n2574ffa0fb",
+                    "name": "ElPagination",
+                    "from": "ElPagination",
+                    "props": {
+                      "style": "margin-top:16px;justify-content:flex-end",
+                      ":current-page": "page",
+                      ":page-size": "pageSize",
+                      ":total": "total",
+                      "layout": "total, prev, pager, next",
+                      "@current-change": "onPageChange"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "css": "",
+        "props": [],
+        "emits": [],
+        "slots": []
+      }
+    },
+    {
+      "id": "pe2fae9405b",
+      "name": "system",
+      "title": "系统监控",
+      "type": "page",
+      "dir": false,
+      "children": [],
+      "raw": false,
+      "pure": false,
+      "hidden": false,
+      "layout": "AdminLayout",
+      "cache": true,
+      "meta": {
+        "path": "/system",
+        "layout": "AdminLayout"
+      },
+      "dsl": {
+        "id": "be4d989bc0e",
+        "name": "system",
+        "version": "1.0.0",
+        "platform": "web",
+        "nodes": [
+          {
+            "id": "n50ffe9f3a9",
+            "name": "div",
+            "from": "div",
+            "props": {
+              "class": "page-system"
+            },
+            "events": {},
+            "directives": [],
+            "children": [
+              {
+                "id": "n603ab60664",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {},
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "nc723d1491d",
+                    "name": "template",
+                    "from": "template",
+                    "props": {
+                      "#header": ""
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n5a6d8952e0",
+                        "name": "span",
+                        "from": "span",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": "数据库"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nd60bb0aefe",
+                    "name": "ElDescriptions",
+                    "from": "ElDescriptions",
+                    "props": {
+                      ":column": 3,
+                      "border": true
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n8cfaa60083",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "连接状态"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n561a52fe78",
+                            "name": "ElTag",
+                            "from": "ElTag",
+                            "props": {
+                              ":type": "sys.mysql?.connected ? 'success' : 'danger'"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": "{{ sys.mysql?.connected ? '正常' : '异常' }}"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "naf90e63645",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "用户数"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ sys.mysql?.users }}"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ne2501523b8",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {
+                  "style": "margin-top:16px"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "ncaed0a751a",
+                    "name": "template",
+                    "from": "template",
+                    "props": {
+                      "#header": ""
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n29ec5466dc",
+                        "name": "span",
+                        "from": "span",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": "缓存"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n7c4bae9ffe",
+                    "name": "ElDescriptions",
+                    "from": "ElDescriptions",
+                    "props": {
+                      ":column": 3,
+                      "border": true
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n6ccf8d7e46",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "连接状态"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n0595cb7ab5",
+                            "name": "ElTag",
+                            "from": "ElTag",
+                            "props": {
+                              ":type": "sys.redis?.connected ? 'success' : 'danger'"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": "{{ sys.redis?.connected ? '正常' : '异常' }}"
+                          }
+                        ]
+                      },
+                      {
+                        "id": "n02208c0918",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "键数量"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ sys.redis?.keyCount }}"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "nf4031f3d7c",
+                "name": "ElCard",
+                "from": "ElCard",
+                "props": {
+                  "style": "margin-top:16px"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "nd7c18332f3",
+                    "name": "template",
+                    "from": "template",
+                    "props": {
+                      "#header": ""
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n6fae1457f0",
+                        "name": "span",
+                        "from": "span",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": "运行时"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n71494e849a",
+                    "name": "ElDescriptions",
+                    "from": "ElDescriptions",
+                    "props": {
+                      ":column": 3,
+                      "border": true
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n123338e52c",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "Java 版本"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ sys.jvm?.javaVersion }}"
+                      },
+                      {
+                        "id": "nfb60e9b890",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "最大内存"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ sys.jvm?.maxMemoryMB }} MB"
+                      },
+                      {
+                        "id": "n0151a3f8b5",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "已用内存"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ sys.jvm?.usedMemoryMB }} MB"
+                      },
+                      {
+                        "id": "nf4aa5a1bab",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "可用内存"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ sys.jvm?.freeMemoryMB }} MB"
+                      },
+                      {
+                        "id": "ndf4f24d77e",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "CPU 核心"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ sys.jvm?.processors }}"
+                      },
+                      {
+                        "id": "n5568b9882b",
+                        "name": "ElDescriptionsItem",
+                        "from": "ElDescriptionsItem",
+                        "props": {
+                          "label": "已运行"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ sys.jvm?.uptimeSeconds }} 秒"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "css": "",
+        "props": [],
+        "emits": [],
+        "slots": []
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "blk61bdbc6c98",
+      "name": "AdminLayout",
+      "title": "后台布局",
+      "type": "block",
+      "fromType": "schema",
+      "dsl": {
+        "id": "b61146b616f",
+        "name": "AdminLayout",
+        "nodes": [
+          {
+            "id": "n4435b589e6",
+            "name": "ElContainer",
+            "from": "ElContainer",
+            "props": {
+              "class": "admin-layout"
+            },
+            "events": {},
+            "directives": [],
+            "children": [
+              {
+                "id": "n37c924d470",
+                "name": "ElAside",
+                "from": "ElAside",
+                "props": {
+                  "width": "220px",
+                  "class": "sidebar"
+                },
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "n655c8ce628",
+                    "name": "div",
+                    "from": "div",
+                    "props": {
+                      "class": "logo"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n135befb0a0",
+                        "name": "span",
+                        "from": "span",
+                        "props": {
+                          "class": "logo-icon"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "🌿"
+                      },
+                      {
+                        "id": "n989d991ff3",
+                        "name": "span",
+                        "from": "span",
+                        "props": {
+                          "class": "logo-text"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "节律守护"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n6a9ea34373",
+                    "name": "ElMenu",
+                    "from": "ElMenu",
+                    "props": {
+                      ":default-active": "route.path",
+                      "router": true,
+                      "background-color": "#FFF9EF",
+                      "text-color": "#7D746B",
+                      "active-text-color": "#5B9A7A"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n3d0502d9ab",
+                        "name": "ElMenuItem",
+                        "from": "ElMenuItem",
+                        "props": {
+                          "index": "/dashboard"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n62766908a8",
+                            "name": "ElIcon",
+                            "from": "ElIcon",
+                            "props": {},
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "nb1d3cfb919",
+                                "name": "DataLine",
+                                "from": "DataLine",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "nc4b0b148de",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#title": ""
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "na5b6fc5a1b",
+                                "name": "span",
+                                "from": "span",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": "数据总览"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "nf8765957af",
+                        "name": "ElMenuItem",
+                        "from": "ElMenuItem",
+                        "props": {
+                          "index": "/users"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n16172ca139",
+                            "name": "ElIcon",
+                            "from": "ElIcon",
+                            "props": {},
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n0f190daa7f",
+                                "name": "User",
+                                "from": "User",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "nf0b1d398dc",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#title": ""
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "naa890232c2",
+                                "name": "span",
+                                "from": "span",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": "用户管理"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "n1b4b86db61",
+                        "name": "ElMenuItem",
+                        "from": "ElMenuItem",
+                        "props": {
+                          "index": "/alerts"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "ne85164220b",
+                            "name": "ElIcon",
+                            "from": "ElIcon",
+                            "props": {},
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n5ba34a6728",
+                                "name": "Bell",
+                                "from": "Bell",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "na0a359a5f9",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#title": ""
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "nfd95428953",
+                                "name": "span",
+                                "from": "span",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": "告警处置"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "n3400c4c3cf",
+                        "name": "ElMenuItem",
+                        "from": "ElMenuItem",
+                        "props": {
+                          "index": "/feedback"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "ne1896f8528",
+                            "name": "ElIcon",
+                            "from": "ElIcon",
+                            "props": {},
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "nea1c48b018",
+                                "name": "ChatDotRound",
+                                "from": "ChatDotRound",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "n48bd0cf1be",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#title": ""
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n4a2dd3703b",
+                                "name": "span",
+                                "from": "span",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": "反馈处理"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "n59567f9629",
+                        "name": "ElMenuItem",
+                        "from": "ElMenuItem",
+                        "props": {
+                          "index": "/devices"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "ne3c283b1a0",
+                            "name": "ElIcon",
+                            "from": "ElIcon",
+                            "props": {},
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n7c97244ca7",
+                                "name": "Cpu",
+                                "from": "Cpu",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "nedfdb26925",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#title": ""
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n52c05e0d36",
+                                "name": "span",
+                                "from": "span",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": "设备管理"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "nda458b4cb7",
+                        "name": "ElMenuItem",
+                        "from": "ElMenuItem",
+                        "props": {
+                          "index": "/system"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n71ba4b9f63",
+                            "name": "ElIcon",
+                            "from": "ElIcon",
+                            "props": {},
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n4c23064532",
+                                "name": "Monitor",
+                                "from": "Monitor",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "nac9b07608c",
+                            "name": "template",
+                            "from": "template",
+                            "props": {
+                              "#title": ""
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": [
+                              {
+                                "id": "n5d4cea1465",
+                                "name": "span",
+                                "from": "span",
+                                "props": {},
+                                "events": {},
+                                "directives": [],
+                                "children": "系统监控"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "n4bc60561b0",
+                "name": "ElContainer",
+                "from": "ElContainer",
+                "props": {},
+                "events": {},
+                "directives": [],
+                "children": [
+                  {
+                    "id": "n289b2cab88",
+                    "name": "ElHeader",
+                    "from": "ElHeader",
+                    "props": {
+                      "height": "60px",
+                      "class": "header"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "n23a3f003c5",
+                        "name": "div",
+                        "from": "div",
+                        "props": {
+                          "class": "header-title"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": "{{ route.meta.title }}"
+                      },
+                      {
+                        "id": "n8629c29575",
+                        "name": "div",
+                        "from": "div",
+                        "props": {
+                          "class": "header-right"
+                        },
+                        "events": {},
+                        "directives": [],
+                        "children": [
+                          {
+                            "id": "n8a7e57bbdb",
+                            "name": "span",
+                            "from": "span",
+                            "props": {
+                              "class": "username"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": "{{ userStore.user?.name }}"
+                          },
+                          {
+                            "id": "n3185c1297d",
+                            "name": "ElButton",
+                            "from": "ElButton",
+                            "props": {
+                              "text": true,
+                              "@click": "logout"
+                            },
+                            "events": {},
+                            "directives": [],
+                            "children": "退出登录"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "n97e7c3bbc1",
+                    "name": "ElMain",
+                    "from": "ElMain",
+                    "props": {
+                      "class": "content"
+                    },
+                    "events": {},
+                    "directives": [],
+                    "children": [
+                      {
+                        "id": "nc4c37f674a",
+                        "name": "router-view",
+                        "from": "router-view",
+                        "props": {},
+                        "events": {},
+                        "directives": [],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "css": ""
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "vue",
+      "version": "^3.4.21"
+    },
+    {
+      "name": "element-plus",
+      "version": "^2.4.0"
+    },
+    {
+      "name": "echarts",
+      "version": "^5.4.0"
+    }
+  ],
+  "apis": [
+    {
+      "method": "POST",
+      "path": "/api/auth/send-code",
+      "desc": "发送验证码"
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "desc": "登录"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/dashboard",
+      "desc": "核心指标"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/trend",
+      "desc": "趋势数据"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/users",
+      "desc": "用户列表"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/users/{id}",
+      "desc": "用户详情"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users/set-admin",
+      "desc": "设为/取消管理员"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users/set-active",
+      "desc": "启用/禁用账号"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/alerts",
+      "desc": "告警列表"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/alerts/handle",
+      "desc": "处理告警"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/feedback",
+      "desc": "反馈列表"
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/feedback/reply",
+      "desc": "回复反馈"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/devices",
+      "desc": "设备列表"
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/system",
+      "desc": "系统监控"
+    }
+  ],
+  "meta": {
+    "framework": "Vue 3 + Element Plus",
+    "designTokens": {
+      "primary": "#8FA68E",
+      "primaryDark": "#5B9A7A",
+      "bg": "#F4EFE6",
+      "surface": "#FFF9EF",
+      "card": "#FFFFFF",
+      "text1": "#2F2A24",
+      "text2": "#7D746B",
+      "border": "#E8E3D8",
+      "warning": "#D4A574",
+      "danger": "#E55A5A"
+    },
+    "sidebar": [
+      {
+        "path": "/dashboard",
+        "title": "数据总览"
+      },
+      {
+        "path": "/users",
+        "title": "用户管理"
+      },
+      {
+        "path": "/alerts",
+        "title": "告警处置"
+      },
+      {
+        "path": "/feedback",
+        "title": "反馈处理"
+      },
+      {
+        "path": "/devices",
+        "title": "设备管理"
+      },
+      {
+        "path": "/system",
+        "title": "系统监控"
+      }
+    ]
+  },
+  "config": {
+    "port": 5177,
+    "proxy": {
+      "/api": "http://localhost:3000"
+    }
+  },
+  "globals": {},
+  "i18n": {},
+  "env": []
+}

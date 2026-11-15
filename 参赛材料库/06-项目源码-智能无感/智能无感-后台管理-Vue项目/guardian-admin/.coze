@@ -1,0 +1,10 @@
+[project]
+requires = ["nodejs-24"]
+
+[dev]
+build = ["pnpm", "install"]
+run = ["sh", "-c", "node server/index.mjs"]
+
+[deploy]
+build = ["pnpm", "run", "build"]
+run = ["sh", "-c", "cross-env NODE_ENV=production node server/index.mjs"]

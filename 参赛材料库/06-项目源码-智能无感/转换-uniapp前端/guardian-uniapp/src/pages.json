@@ -1,0 +1,97 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {}
+  },
+  "pages": [
+    { "path": "pages/home/index", "style": { "navigationBarTitleText": "节律守护" } },
+    { "path": "pages/guardian/index", "style": { "navigationBarTitleText": "居家守护" } },
+    { "path": "pages/monitor/index", "style": { "navigationBarTitleText": "健康监测" } },
+    { "path": "pages/ai-chat/index", "style": { "navigationBarTitleText": "智能助手" } },
+    { "path": "pages/profile/index", "style": { "navigationBarTitleText": "个人中心" } },
+
+    { "path": "pages/login/index", "style": { "navigationBarTitleText": "登录" } },
+    { "path": "pages/register/index", "style": { "navigationBarTitleText": "注册" } },
+    { "path": "pages/forgot-password/index", "style": { "navigationBarTitleText": "找回密码" } },
+
+    { "path": "pages/guardian-panel/index", "style": { "navigationBarTitleText": "守护面板" } },
+    { "path": "pages/health-report/index", "style": { "navigationBarTitleText": "健康报告" } },
+    { "path": "pages/health-detail/index", "style": { "navigationBarTitleText": "健康详情" } },
+    { "path": "pages/ai-sleep-analysis/index", "style": { "navigationBarTitleText": "睡眠分析" } },
+
+    { "path": "pages/family/index", "style": { "navigationBarTitleText": "家庭成员" } },
+    { "path": "pages/member-bind/index", "style": { "navigationBarTitleText": "成员绑定" } },
+    { "path": "pages/elder-info/index", "style": { "navigationBarTitleText": "长辈档案" } },
+
+    { "path": "pages/medicine-reminder/index", "style": { "navigationBarTitleText": "用药提醒" } },
+    { "path": "pages/medication-history/index", "style": { "navigationBarTitleText": "服药记录" } },
+    { "path": "pages/diet-record/index", "style": { "navigationBarTitleText": "饮食记录" } },
+    { "path": "pages/exercise-record/index", "style": { "navigationBarTitleText": "运动记录" } },
+
+    { "path": "pages/sos-map/index", "style": { "navigationBarTitleText": "紧急求助" } },
+    { "path": "pages/alert-history/index", "style": { "navigationBarTitleText": "告警历史" } },
+    { "path": "pages/emergency-contacts/index", "style": { "navigationBarTitleText": "紧急联系人" } },
+    { "path": "pages/location-detail/index", "style": { "navigationBarTitleText": "位置详情" } },
+
+    { "path": "pages/device/index", "style": { "navigationBarTitleText": "我的设备" } },
+    { "path": "pages/bluetooth-connection/index", "style": { "navigationBarTitleText": "蓝牙连接" } },
+    { "path": "pages/monitor-history/index", "style": { "navigationBarTitleText": "监测历史" } },
+    { "path": "pages/voice-monitor/index", "style": { "navigationBarTitleText": "语音监测" } },
+    { "path": "pages/video-monitor/index", "style": { "navigationBarTitleText": "视频监测" } },
+
+    { "path": "pages/settings/index", "style": { "navigationBarTitleText": "设置" } },
+    { "path": "pages/simple-mode/index", "style": { "navigationBarTitleText": "长辈极简模式" } },
+    { "path": "pages/privacy-security/index", "style": { "navigationBarTitleText": "隐私安全" } },
+    { "path": "pages/about/index", "style": { "navigationBarTitleText": "关于我们" } },
+    { "path": "pages/user-agreement/index", "style": { "navigationBarTitleText": "用户服务协议" } },
+    { "path": "pages/privacy-policy/index", "style": { "navigationBarTitleText": "隐私政策" } },
+    { "path": "pages/voiceprint-agreement/index", "style": { "navigationBarTitleText": "声纹授权协议" } },
+    { "path": "pages/debug-log/index", "style": { "navigationBarTitleText": "调试日志" } }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "AI节律守护",
+    "navigationBarBackgroundColor": "#F4EFE6",
+    "backgroundColor": "#F4EFE6",
+    "backgroundColorTop": "#F4EFE6",
+    "backgroundColorBottom": "#F4EFE6"
+  },
+  "tabBar": {
+    "color": "#7D746B",
+    "selectedColor": "#8FA68E",
+    "backgroundColor": "#FFF9EF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "节律守护",
+        "iconPath": "static/tabbar/moon.png",
+        "selectedIconPath": "static/tabbar/moon-active.png"
+      },
+      {
+        "pagePath": "pages/guardian/index",
+        "text": "居家守护",
+        "iconPath": "static/tabbar/shield.png",
+        "selectedIconPath": "static/tabbar/shield-active.png"
+      },
+      {
+        "pagePath": "pages/monitor/index",
+        "text": "健康监测",
+        "iconPath": "static/tabbar/heart.png",
+        "selectedIconPath": "static/tabbar/heart-active.png"
+      },
+      {
+        "pagePath": "pages/ai-chat/index",
+        "text": "智能助手",
+        "iconPath": "static/tabbar/chat.png",
+        "selectedIconPath": "static/tabbar/chat-active.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "个人中心",
+        "iconPath": "static/tabbar/user.png",
+        "selectedIconPath": "static/tabbar/user-active.png"
+      }
+    ]
+  }
+}

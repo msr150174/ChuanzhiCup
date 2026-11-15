@@ -1,0 +1,130 @@
+==============================================================================
+  一、空目录（0 文件，或仅剩系统文件）
+==============================================================================
+
+  找到 431 个空目录:
+
+     C:\ProgramData\.MUMUVMM
+     C:\ProgramData\ADVINST_LOGS
+     C:\ProgramData\Adobe\Lightroom
+     C:\ProgramData\Alibaba\AlibabaProtectDT
+     C:\ProgramData\AmneziaVPN\log
+     C:\ProgramData\Autodesk\Synergy\boost_interprocess
+     C:\ProgramData\Baidu\BaiduPinyin\UIFrame
+     C:\ProgramData\JianyingPro\Service\Config
+     C:\ProgramData\KRSHistory\kxescore\data
+     C:\ProgramData\Live2D\Cubism License\12
+     C:\ProgramData\Live2D\Pack License\12
+     C:\ProgramData\MOfficePlus\imagecache
+     C:\ProgramData\MySQL\MySQL Server 8.0\Uploads
+     C:\ProgramData\Reprise
+     C:\ProgramData\SoftwareDistribution
+     C:\ProgramData\SogouInput\SGSysToast\image
+     C:\ProgramData\SogouInput\StatusTipData
+     C:\ProgramData\SogouInput\conf
+     C:\ProgramData\SogouInput\skinrootdir\sgwizarddir
+     C:\ProgramData\SogouInput\skinrootdir\thumbdir
+     C:\ProgramData\ToDesk_Lite\ImageResources
+     C:\ProgramData\boost_interprocess\33000000_F3040000
+     C:\ProgramData\kingsoft\KIS\kich557
+     C:\ProgramData\kingsoft\KIS\kich_kvip_10001
+     C:\ProgramData\kingsoft\KIS\log
+     C:\ProgramData\kingsoft\ksbw\fsign
+     C:\ProgramData\kingsoft\kwfsdata\c3fsign
+     C:\ProgramData\kingsoft\kwfsdata\fsign
+     C:\ProgramData\ssh
+     C:\Users\msr150174\AppData\Local\Adobe\CameraRaw\Cache
+     C:\Users\msr150174\AppData\Local\Adobe\CameraRaw\Cache2
+     C:\Users\msr150174\AppData\Local\Adobe\licflags
+     C:\Users\msr150174\AppData\Local\CEF\User Data\Dictionaries
+     C:\Users\msr150174\AppData\Local\CEF\User Data\WidevineCdm
+     C:\Users\msr150174\AppData\Local\CrashDumps
+     C:\Users\msr150174\AppData\Local\Deployment
+     C:\Users\msr150174\AppData\Local\Doubao\Application
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\ActorSafetyLists
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\AmountExtractionHeuristicRegexes
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\BrowserMetrics
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\CaptchaProviders
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\CertificateRevocation
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\Crowd Deny
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\FileTypePolicies
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\FirstPartySetsPreloaded
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\MEIPreload
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\OnDeviceHeadSuggestModel
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\OptimizationHints
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\OriginTrials
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\PKIMetadata
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\PrivacySandboxAttestationsPreloaded
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\SSLErrorAssistant
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\Safe Browsing
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\SafetyTips
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\Screenshot
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\TrustTokenKeyCommitments
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\WasmTtsEngine
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\ZxcvbnData
+     C:\Users\msr150174\AppData\Local\Doubao\User Data\hyphen-data
+     C:\Users\msr150174\AppData\Local\EV录屏\log
+
+==============================================================================
+  二、疑似半删残留（目录存在，但无可执行文件）
+==============================================================================
+
+  找到 49 个可疑目录:
+
+        3.36 GB   1,648 个文件  D:\KuGou
+        3.23 GB      68 个文件  D:\AImodel
+        2.20 GB   1,497 个文件  C:\Users\msr150174\AppData\Roaming\Trae CN
+       654.9 MB      26 个文件  D:\Almodel
+       631.4 MB   2,370 个文件  C:\Users\msr150174\AppData\Roaming\Adobe
+       610.0 MB   4,781 个文件  C:\Users\msr150174\AppData\Roaming\douyin
+       395.1 MB  14,377 个文件  C:\Users\msr150174\AppData\Local\uv
+       382.0 MB     753 个文件  C:\Users\msr150174\AppData\Roaming\Code
+       334.9 MB       2 个文件  C:\Users\msr150174\AppData\Roaming\GreenCore7z
+       308.9 MB   1,523 个文件  C:\Users\msr150174\AppData\Roaming\KuGou8
+       299.9 MB  15,640 个文件  D:\go
+       257.8 MB     649 个文件  C:\Users\msr150174\AppData\Roaming\JetBrains
+       240.0 MB       4 个文件  D:\hf_cache
+       161.7 MB   4,580 个文件  D:\python
+       150.2 MB       1 个文件  C:\Users\msr150174\AppData\Local\electron
+       148.9 MB      59 个文件  C:\Program Files\Intel
+       142.7 MB   1,316 个文件  C:\Users\msr150174\AppData\Local\OfficePLUS
+       135.9 MB     547 个文件  C:\Users\msr150174\AppData\Roaming\Postman
+       130.4 MB     770 个文件  C:\Program Files (x86)\Reference Assemblies
+       124.6 MB      61 个文件  D:\模型
+       110.8 MB     906 个文件  C:\Users\msr150174\AppData\Roaming\Comfy Desktop
+        90.5 MB     458 个文件  C:\Users\msr150174\AppData\Roaming\baidunetdisk
+        84.7 MB     509 个文件  C:\Users\msr150174\AppData\Roaming\QQ
+        76.4 MB       2 个文件  C:\Users\msr150174\AppData\Roaming\utForpc
+        68.7 MB     546 个文件  C:\Users\msr150174\AppData\Local\com.tencent.yuanbao
+        63.4 MB     543 个文件  C:\Users\msr150174\AppData\Roaming\ollama app.exe
+        60.7 MB   2,728 个文件  C:\Users\msr150174\AppData\Local\node-gyp
+        59.0 MB     105 个文件  C:\Users\msr150174\AppData\Roaming\360browser
+        41.5 MB     458 个文件  C:\Users\msr150174\AppData\Roaming\ichat
+        40.5 MB     212 个文件  C:\Users\msr150174\AppData\Roaming\bianjie_ai
+        37.9 MB   3,495 个文件  C:\Users\msr150174\AppData\Roaming\CELSYSUserData
+        37.2 MB     415 个文件  C:\Users\msr150174\AppData\Local\com.fnjs.clash
+        35.0 MB      91 个文件  C:\Program Files\Reference Assemblies
+        26.6 MB     220 个文件  C:\Users\msr150174\AppData\Local\assembly
+        25.6 MB      25 个文件  D:\wxbiaoqingbao
+        25.6 MB      24 个文件  C:\Users\msr150174\AppData\Roaming\douyin_widget
+        20.2 MB      44 个文件  C:\Users\msr150174\AppData\Local\Docker
+        18.8 MB     154 个文件  C:\Users\msr150174\AppData\Roaming\ifonts_client
+        17.7 MB       9 个文件  C:\Users\msr150174\AppData\Local\Comms
+        17.3 MB     165 个文件  C:\Users\msr150174\AppData\Roaming\GameStore
+
+==============================================================================
+  三、AppData 里孤立的数据目录（软件已不在）
+==============================================================================
+
+        59.0 MB     105 个文件  C:\Users\msr150174\AppData\Roaming\360browser
+        23.7 MB      77 个文件  C:\Users\msr150174\AppData\Roaming\360Game5
+         2.5 MB      23 个文件  C:\ProgramData\360SD
+         695 KB      20 个文件  C:\Users\msr150174\AppData\Local\MuMuPlayer
+         464 KB      11 个文件  C:\Users\msr150174\AppData\Roaming\360se6
+         111 KB       3 个文件  C:\Users\msr150174\AppData\Roaming\360mobilemgr
+          76 KB       2 个文件  C:\ProgramData\360zip
+          56 KB       2 个文件  C:\Users\msr150174\AppData\Roaming\360Quarant
+          29 KB       3 个文件  C:\Users\msr150174\AppData\Local\360Safe
+           24 B       1 个文件  C:\Users\msr150174\AppData\Roaming\360Login
+            0 B       2 个文件  C:\ProgramData\Netease
+            0 B       0 个文件  C:\ProgramData\.MUMUVMM

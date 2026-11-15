@@ -1,0 +1,73 @@
+# ============================================================
+#  AI 节律守护 · .gitignore
+#  原则：密钥永不入库、构建产物不入库、大文件不入库
+# ============================================================
+
+# ---- ★ 密钥与环境变量（最关键）----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+credentials.json
+
+# ---- 构建产物 ----
+# dist 是小程序编译产物，内含编译后的前端代码，不入库
+dist/
+_解压预览/
+build/
+target/
+out/
+node_modules/
+.pnpm-store/
+
+# ---- 打包与压缩（大体积，不入库）----
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# ---- Java ----
+*.class
+*.jar
+*.war
+!maven-wrapper.jar
+.gradle/
+.idea/
+*.iml
+!.idea/codeStyles/
+
+# ---- 前端 ----
+miniprogram_npm/
+project.private.config.json
+.vite/
+*.tsbuildinfo
+
+# ---- 日志与临时 ----
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+_dev.err
+_dev.log
+dump.rdb
+
+# ---- 数据库转储 ----
+*.sql.gz
+*.dump
+
+# ---- 编辑器与系统 ----
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 大赛提交物（用 Release 或网盘，不进 git）----
+*.mp4
+*.mov
+*.avi

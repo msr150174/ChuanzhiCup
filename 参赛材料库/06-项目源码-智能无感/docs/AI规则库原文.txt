@@ -1,0 +1,192 @@
+﻿private async fetchWithRetry(url: string, options: RequestInit, retries: number = MAX_RETRIES): Promise<Response> {
+    for (let attempt = 0; attempt < retries; attempt++) {
+      try {
+        const response = await fetch(url, {
+          ...options,
+          signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS)
+        });
+        
+        if (response.ok) {
+          return response;
+        }
+        
+        // 如果是500错误，尝试重试
+        if (response.status === 500 && attempt < retries - 1) {
+          this.logger.warn(`API返回500错误，尝试重试(${attempt + 1}/${retries})`);
+          await new Promise(resolve => setTimeout(resolve, RETRY_DELAY_MS * (attempt + 1)));
+          continue;
+        }
+        
+        return response;
+      } catch (error) {
+        if (attempt < retries - 1) {
+          this.logger.warn(`请求失败，尝试重试(${attempt + 1}/${retries}): ${error}`);
+          await new Promise(resolve => setTimeout(resolve, RETRY_DELAY_MS * (attempt + 1)));
+          continue;
+        }
+        throw error;
+      }
+    }
+    throw new Error('所有重试均失败');
+  }
+
+  /**
+   * 与Coze AI进行对话（增强版 v2.0 - 带重试机制）
+   * @param message 用户消息
+   * @param conversationId 会话ID（可选）
+   * @param userContext 用户健康数据上下文（可选）
+   */
+  async chat(
+    message: string, 
+    conversationId?: string,
+    userContext?: {
+      healthScore?: number;
+      todaySteps?: number;
+      sleepHours?: number;
+      medicineTaken?: boolean;
+      location?: string;
+      lastActivity?: string;
+    }
+  ): Promise<{ code: number; msg: string; data: EnhancedChatResponse }> {
+    const startTime = Date.now();
+    this.logger.log(`收到AI对话请求: ${message.substring(0, 50)}...`);
+    if (userContext) {
+      this.logger.log(`用户健康数据: 健康评分=${userContext.healthScore}, 步数=${userContext.todaySteps}`);
+    }
+
+    // v2.1新增：检查缓存（简单问候直接返回）
+    const cacheKey = message.trim().toLowerCase();
+    const cached = RESPONSE_CACHE.get(cacheKey);
+    if (cached && Date.now() - cached.timestamp < CACHE_EXPIRE_MS) {
+      this.logger.log(`命中缓存，快速返回: ${cacheKey}`);
+      return {
+        code: 200,
+        msg: 'success',
+        data: {
+          content: cached.content,
+          conversationId: conversationId || 'cached',
+          hasEmoji: true,
+          retryCount: 0,
+          responseTime: Date.now() - startTime
+        }
+      };
+    }
+
+    // 如果没有配置Coze API，返回离线响应
+    if (!this.cozeApiToken || !this.botId) {
+      this.logger.warn('Coze API未配置，返回离线响应');
+      return {
+        code: 200,
+        msg: 'success',
+        data: {
+          content: this.generateOfflineResponse(message, userContext),
+          conversationId: conversationId || 'offline',
+          hasEmoji: true,
+          retryCount: 0,
+          responseTime: Date.now() - startTime
+        }
+      };
+    }
+
+    let retryCount = 0;
+    try {
+      // 构建增强消息，包含用户健康数据
+      const enhancedMessage = this.buildEnhancedMessage(message, userContext);
+      
+      // 步骤1：发起聊天请求（带重试）
+      const chatResponse = await this.fetchWithRetry(`${this.cozeApiBaseUrl}/v3/chat`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this.cozeApiToken}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          bot_id: this.botId,
+          user_id: 'default-user',
+          stream: false,
+          auto_save_history: true,
+          additional_messages: [
+            {
+              role: 'user',
+              content: enhancedMessage,
+              content_type: 'text'
+            }
+          ],
+          ...(conversationId && { conversation_id: conversationId })
+        })
+      });
+
+      if (!chatResponse.ok) {
+        retryCount++;
+        throw new Error(`Coze API error: ${chatResponse.status}`);
+      }
+
+      const chatResult = await chatResponse.json() as CozeChatResponse;
+      
+      if (chatResult.code !== 0) {
+        throw new Error(chatResult.msg || 'Coze API error');
+      }
+
+      const chatId = chatResult.data?.id;
+      const convId = chatResult.data?.conversation_id || conversationId || 'default';
+
+      // 步骤2：等待AI处理完成（最多等待20秒）
+      if (chatResult.data?.status === 'in_progress' && chatId) {
+        this.logger.log(`等待AI处理完成, chatId: ${chatId}`);
+        
+        // 等待最多20秒，每1秒检查一次状态
+        for (let i = 0; i < 20; i++) {
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          
+          try {
+            const statusResponse = await fetch(
+              `${this.cozeApiBaseUrl}/v3/chat/retrieve?chat_id=${chatId}&conversation_id=${convId}`,
+              {
+                headers: {
+                  'Authorization': `Bearer ${this.cozeApiToken}`,
+                }
+              }
+            );
+            
+            const statusResult = await statusResponse.json();
+            this.logger.log(`轮询第${i + 1}次, 状态: ${statusResult.data?.status}`);
+            
+            if (statusResult.data?.status === 'completed') {
+              this.logger.log('AI处理已完成');
+              break;
+            }
+          } catch (pollError) {
+            this.logger.warn(`轮询请求失败: ${pollError}`);
+          }
+        }
+      }
+
+      // 步骤3：获取消息列表
+      if (chatId) {
+        try {
+          const messageResponse = await fetch(
+            `${this.cozeApiBaseUrl}/v3/chat/message/list?chat_id=${chatId}&conversation_id=${convId}`,
+            {
+              headers: {
+                'Authorization': `Bearer ${this.cozeApiToken}`,
+              }
+            }
+          );
+          
+          const messageResult = await messageResponse.json() as { 
+            data?: Array<{
+              id?: string;
+              role?: string; 
+              type?: string; 
+              content?: string;
+              content_type?: string;
+              timestamp?: number;
+            }> 
+          };
+          
+          this.logger.log(`获取消息列表成功, 数量: ${messageResult.data?.length || 0}`);
+          
+          // 打印所有消息用于调试
+          if (messageResult.data) {
+            messageResult.data.forEach((msg, idx) => {
+              this.logger.log(`消息[${

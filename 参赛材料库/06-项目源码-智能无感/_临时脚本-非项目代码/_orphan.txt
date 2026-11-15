@@ -1,0 +1,286 @@
+==============================================================================
+  注册表有记录但程序目录已不存在的（卸载残留）
+==============================================================================
+
+  注册表中共 262 个程序
+
+  ★ 找到 137 个残留（注册表有，程序没了）:
+
+        1,277 MB  NVIDIA Nsight Systems 2025.3.2
+                 MsiExec.exe
+          990 MB  NVIDIA Nsight Compute 2025.3.0
+                 MsiExec.exe
+          723 MB  微信
+                 D:\WX\Weixin\Uninstall.exe
+          582 MB  MySQL Installer
+                 MsiExec.exe
+          425 MB  Universal CRT Headers Libraries and Sources
+                 MsiExec.exe
+          419 MB  NVIDIA Nsight Visual Studio Edition 2025.3.0.25168
+                 MsiExec.exe
+          403 MB  SDK Debuggers
+                 MsiExec.exe
+          271 MB  Go Programming Language amd64 go1.27.1
+                 MsiExec.exe
+          246 MB  WPT Redistributables
+                 MsiExec.exe
+          231 MB  Windows SDK for Windows Store Apps Headers
+                 MsiExec.exe
+          212 MB  WPTx64 (DesktopEditions)
+                 MsiExec.exe
+          195 MB  Windows SDK for Windows Store Apps Libs
+                 MsiExec.exe
+          176 MB  Windows SDK for Windows Store Apps Tools
+                 MsiExec.exe
+          142 MB  Windows SDK Desktop Libs arm64
+                 MsiExec.exe
+          124 MB  WinRT Intellisense UAP - Other Languages
+                 MsiExec.exe
+          103 MB  Node.js
+                 MsiExec.exe
+           94 MB  Windows SDK Desktop Headers x86
+                 MsiExec.exe
+           74 MB  Windows SDK Desktop Libs x64
+                 MsiExec.exe
+           68 MB  Windows SDK Desktop Libs x86
+                 MsiExec.exe
+           66 MB  Windows SDK Desktop Libs arm
+                 MsiExec.exe
+           64 MB  Windows App Certification Kit x64
+                 MsiExec.exe
+           42 MB  Microsoft .NET Framework 4.7.1 Targeting Pack
+                 MsiExec.exe
+           42 MB  Microsoft .NET Framework 4.8.1 Targeting Pack
+                 MsiExec.exe
+           34 MB  Intel(R) C++ Redistributables on Intel(R) 64
+                 MsiExec.exe
+           32 MB  vs_communitysharedmsi
+                 MsiExec.exe
+           31 MB  Office 16 Click-to-Run Extensibility Component
+                 MsiExec.exe
+           29 MB  Microsoft Visual C++ 2022 X64 Debug Runtime - 14.44.35211
+                 MsiExec.exe
+           24 MB  Microsoft Visual C++ 2022 X86 Debug Runtime - 14.44.35211
+                 MsiExec.exe
+           20 MB  Microsoft .NET Framework 4.8.1 SDK
+                 MsiExec.exe
+           20 MB  Windows SDK Desktop Tools x64
+                 MsiExec.exe
+           20 MB  Windows SDK Desktop Tools arm64
+                 MsiExec.exe
+           19 MB  Windows SDK Desktop Tools x86
+                 MsiExec.exe
+           19 MB  cpolar
+                 MsiExec.exe
+           14 MB  Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219
+                 MsiExec.exe
+           13 MB  Windows SDK for Windows Store Apps Contracts
+                 MsiExec.exe
+           13 MB  WinRT Intellisense UAP - en-us
+                 MsiExec.exe
+           12 MB  Microsoft Visual C++ 2012 x64 Additional Runtime - 11.0.61030
+                 MsiExec.exe
+           12 MB  Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.40664
+                 MsiExec.exe
+           11 MB  Microsoft Visual C++ 2022 X64 Additional Runtime - 14.51.36247
+                 MsiExec.exe
+           11 MB  Windows SDK Signing Tools
+                 MsiExec.exe
+           11 MB  Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219
+                 MsiExec.exe
+           10 MB  Microsoft Visual C++ 2022 X86 Additional Runtime - 14.44.35211
+                 MsiExec.exe
+           10 MB  Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030
+                 MsiExec.exe
+            9 MB  Windows SDK Modern Non-Versioned Developer Tools
+                 MsiExec.exe
+            9 MB  Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40664
+                 MsiExec.exe
+            9 MB  Universal CRT Extension SDK
+                 MsiExec.exe
+            9 MB  Windows SDK Modern Versioned Developer Tools
+                 MsiExec.exe
+            9 MB  Windows App Certification Kit Native Components
+                 MsiExec.exe
+            8 MB  Windows SDK for Windows Store Managed Apps Libs
+                 MsiExec.exe
+            7 MB  Office 16 Click-to-Run Licensing Component
+                 MsiExec.exe
+            7 MB  WinRT Intellisense Desktop - Other Languages
+                 MsiExec.exe
+            7 MB  Windows Mobile Extension SDK
+                 MsiExec.exe
+            7 MB  WPTx64 (OnecoreUAP)
+                 MsiExec.exe
+            7 MB  Windows App Certification Kit x64 (OnecoreUAP)
+                 MsiExec.exe
+            6 MB  Universal CRT Redistributable
+                 MsiExec.exe
+            6 MB  VS Script Debugging Common
+                 MsiExec.exe
+            5 MB  Microsoft Visual Studio Setup WMI Provider
+                 MsiExec.exe
+            4 MB  Windows SDK Redistributables
+                 MsiExec.exe
+            4 MB  MSI Development Tools
+                 MsiExec.exe
+            4 MB  icecap_collection_x64
+                 MsiExec.exe
+            4 MB  vs_githubprotocolhandlermsi
+                 MsiExec.exe
+            4 MB  Microsoft System CLR Types for SQL Server 2019
+                 MsiExec.exe
+            4 MB  Windows SDK for Windows Store Apps Metadata
+                 MsiExec.exe
+            4 MB  icecap_collection_neutral
+                 MsiExec.exe
+            3 MB  WinAppDeploy
+                 MsiExec.exe
+            3 MB  Windows SDK
+                 MsiExec.exe
+            3 MB  Windows SDK ARM Desktop Tools
+                 MsiExec.exe
+            3 MB  Windows SDK for Windows Store Apps DirectX x86 Remote
+                 MsiExec.exe
+            3 MB  vs_Graphics_Singletonx64
+                 MsiExec.exe
+            3 MB  Universal General MIDI DLS Extension SDK
+                 MsiExec.exe
+            3 MB  vs_Graphics_Singletonx86
+                 MsiExec.exe
+            3 MB  VS JIT Debugger
+                 MsiExec.exe
+            3 MB  Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.51.36247
+                 MsiExec.exe
+            2 MB  Windows App Certification Kit SupportedApiList x86
+                 MsiExec.exe
+            2 MB  Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.40664
+                 MsiExec.exe
+            2 MB  Universal CRT Tools x64
+                 MsiExec.exe
+            2 MB  Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40664
+                 MsiExec.exe
+            2 MB  Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.44.35211
+                 MsiExec.exe
+            2 MB  Microsoft Visual C++ 2012 x64 Minimum Runtime - 11.0.61030
+                 MsiExec.exe
+            2 MB  vs_filehandler_amd64
+                 MsiExec.exe
+            2 MB  vs_filehandler_x86
+                 MsiExec.exe
+            2 MB  Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030
+                 MsiExec.exe
+            2 MB  Microsoft Visual Studio Setup Configuration
+                 MsiExec.exe
+            2 MB  Universal CRT Tools x86
+                 MsiExec.exe
+            2 MB  vs_minshellinteropsharedmsi
+                 MsiExec.exe
+            2 MB  Application Verifier x64 External Package (OnecoreUAP)
+                 MsiExec.exe
+            1 MB  vs_FileTracker_Singleton
+                 MsiExec.exe
+            1 MB  vs_vswebprotocolselectormsi
+                 MsiExec.exe
+            1 MB  DiagnosticsHub_CollectionService
+                 MsiExec.exe
+            1 MB  vs_communityx64msi
+                 MsiExec.exe
+            1 MB  Intel(R) Serial IO
+                 MsiExec.exe
+            1 MB  Office 16 Click-to-Run Localization Component
+                 MsiExec.exe
+            1 MB  vs_CoreEditorFonts
+                 MsiExec.exe
+            1 MB  WinRT Intellisense Desktop - en-us
+                 MsiExec.exe
+            1 MB  Windows SDK DirectX x64 Remote
+                 MsiExec.exe
+            1 MB  Windows Desktop Extension SDK Contracts
+                 MsiExec.exe
+            0 MB  Windows SDK DirectX x86 Remote
+                 MsiExec.exe
+            0 MB  WinRT Intellisense PPI - Other Languages
+                 MsiExec.exe
+            0 MB  Kits Configuration Installer
+                 MsiExec.exe
+            0 MB  Windows IoT Extension SDK
+                 MsiExec.exe
+            0 MB  WinRT Intellisense IoT - en-us
+                 MsiExec.exe
+            0 MB  WinRT Intellisense PPI - en-us
+                 MsiExec.exe
+            0 MB  WinRT Intellisense IoT - Other Languages
+                 MsiExec.exe
+            0 MB  Windows IoT Extension SDK Contracts
+                 MsiExec.exe
+            0 MB  Microsoft .NET Framework 4.7.1 Doc Redirected 目标包(简体中文)
+                 MsiExec.exe
+            0 MB  vs_vswebprotocolselectormsires
+                 MsiExec.exe
+            0 MB  Windows IP Over USB
+                 MsiExec.exe
+            0 MB  Application Verifier x64 External Package (DesktopEditions)
+                 MsiExec.exe
+            0 MB  Windows SDK EULA
+                 MsiExec.exe
+            0 MB  vs_minshellsharedmsi
+                 MsiExec.exe
+            0 MB  vs_devenx64vmsi
+                 MsiExec.exe
+            0 MB  vs_devenvsharedmsi
+                 MsiExec.exe
+            0 MB  WinRT Intellisense Mobile - en-us
+                 MsiExec.exe
+            0 MB  Windows Team Extension SDK
+                 MsiExec.exe
+            0 MB  Windows SDK Facade Windows WinMD Versioned
+                 MsiExec.exe
+            0 MB  Windows Mobile Extension SDK Contracts
+                 MsiExec.exe
+            0 MB  icecap_collectionresources
+                 MsiExec.exe
+            0 MB  Windows SDK AddOn
+                 MsiExec.exe
+            0 MB  vs_minshellmsires
+                 MsiExec.exe
+            0 MB  Windows SDK Desktop Headers arm64
+                 MsiExec.exe
+            0 MB  Windows SDK Desktop Headers arm
+                 MsiExec.exe
+            0 MB  Windows SDK for Windows Store Apps
+                 MsiExec.exe
+            0 MB  VS Immersive Activate Helper
+                 MsiExec.exe
+            0 MB  vs_minshellinteropx64msi
+                 MsiExec.exe
+            0 MB  Intel(R) Chipset Device Software
+                 MsiExec.exe
+            0 MB  vs_communitymsires
+                 MsiExec.exe
+            0 MB  Windows Desktop Extension SDK
+                 MsiExec.exe
+            0 MB  icecap_collectionresourcesx64
+                 MsiExec.exe
+            0 MB  vs_tipsmsi
+                 MsiExec.exe
+            0 MB  Windows SDK Desktop Headers x64
+                 MsiExec.exe
+            0 MB  vs_minshellx64msi
+                 MsiExec.exe
+            0 MB  vcpp_crt.redist.clickonce
+                 MsiExec.exe
+            0 MB  Windows Team Extension SDK Contracts
+                 MsiExec.exe
+            0 MB  明日方舟-MuMu模拟器12
+                 D:\Program Files\YXArkNights-12.0\uninstall.exe
+            0 MB  百度输入法
+                 D:\6.1.13.7\Uninst.exe
+            0 MB  Tencent QQMail Plugin
+                 C:\Program Files (x86)\QQMailPlugin\uninstall.exe
+            0 MB  Minisoft Toolbox    ￿￿  큱 谀컄°컄°      ⌸̈́鵰½	      큸℀蠀夸克网盘_102_20172860.exe   큧∀谀쵄°쵄°  ￿￿     蓨µ	                         
+                 C:\Users\msr150174\AppData\Local\winToolBox\unist00.exe
+
+==============================================================================
+  说明：这些条目可以安全清理（程序已不存在）
+==============================================================================

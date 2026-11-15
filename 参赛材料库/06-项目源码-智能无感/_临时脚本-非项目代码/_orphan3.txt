@@ -1,0 +1,151 @@
+================================================================================
+  逐个验证可疑目录
+================================================================================
+
+       64.3 MB   MuMu 模拟器虚拟化组件
+      C:\Program Files\MuMuVMMVbox
+      exe=21  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: MuMuVMMBalloonCtrl.exe, MuMuVMMDTrace.exe, MuMuVMMHeadless.exe, MuMuVMMManage.exe
+
+      418.2 MB   NVIDIA 组件
+      C:\Program Files (x86)\NVIDIA Corporation
+      exe=13  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: CrashReporter.exe, Nsight.CoreDumpLoader.exe, TestRunner.exe, NvCoreDumpLoader.exe
+
+       72.5 MB   EVCapture 录屏
+      C:\Program Files (x86)\EVCapture
+      exe=10  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: EVCapture.exe, uninst.exe, EVCapture.exe, EVPlayer.exe
+
+       55.4 MB   百度组件
+      C:\Program Files (x86)\Baidu
+      exe=6  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: IMEBroker.exe, BDDownloadExe.exe, Uninst.exe, Uninst.exe
+
+        7.1 MB   腾讯组件
+      C:\Program Files (x86)\Tencent
+      exe=5  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: bugreport.exe, LogPost.exe, QQPhotoDrawUpdateSvr.exe, TestSpeed.exe
+
+       10.2 MB   Office 15 旧版
+      C:\Program Files\Microsoft Office 15
+      exe=2  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: IntegratedOffice.exe, OfficeClickToRun.exe
+
+       41.9 MB   Microsoft SDKs
+      C:\Program Files (x86)\Microsoft SDKs
+      exe=55  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: al.exe, aspnet_intern.exe, aspnet_merge.exe, AxImp.exe
+
+      308.4 MB   Steam++
+      C:\Program Files\Steam++
+      exe=4  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: Steam++.exe, uninst.exe, createdump.exe, Steam++.Accelerator.exe
+
+    2,994.6 MB   JetBrains IDE
+      C:\Program Files\JetBrains
+      exe=42  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: elevator.exe, fsnotifier.exe, idea64.exe, launcher.exe
+
+      572.2 MB   PCL 我的世界启动器
+      D:\PCL 正式版 2.10.9
+      exe=2  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: Plain Craft Launcher 2.exe, Plain Craft Launcher 2.exe
+
+       26.7 MB   Bongo Cat
+      D:\Bongo Cat Mver爱音
+      exe=2  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: Bongo Cat Mver.exe, BongoCatUI.exe
+
+      508.0 MB   QQ
+      D:\qq
+      exe=2  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: QQMiniApp.exe, TxBugReport.exe
+
+      447.6 MB   酷狗
+      D:\kugo
+      exe=12  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: KuGou.exe, uninst.exe, active_desktop_launcher_x64.exe, bridge_plugin_host.exe
+
+       18.7 MB   cpolar 内网穿透
+      D:\cpolar
+      exe=1  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: cpolar.exe
+
+       12.9 MB   QQ 文件
+      D:\QQFile
+      exe=2  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: saicrack.exe, [Saier]sai2-20240814.exe
+
+       24.1 MB   C++ 相关
+      D:\c++
+      exe=2  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: vcredist_x86.exe, VC_redist.x64.exe
+
+      116.1 MB   压缩工具
+      D:\压缩
+      exe=8  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: SSTap-beta-setup-1.0.9.7.exe, v2ctl.exe, v2ray.exe, v2rayN.exe
+
+      762.5 MB   工具集
+      D:\工具集
+      exe=6  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: Doubao_installer.exe, douyin-downloader-v7.0.0-win32-ia32-douyin-wid-92y8QdhY59Z.exe, IMEBroker.exe, kimi_2.0.4.exe
+
+    1,348.9 MB   运行文件
+      D:\运行文件
+      exe=8  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: 7z2603-x64.exe, Coze-v1.1.44-win32-x64.exe, Docker Desktop Installer.exe, dsh-latest-windows-x64.exe
+
+    3,820.7 MB   VCPchat
+      D:\VCPchat
+      exe=419  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: StartVCPchat.exe, audio_server.exe, audio_server.old.soxR.exe, audio_server_rubato.exe
+
+    1,197.3 MB   newapi
+      D:\newapi
+      exe=90  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: acorn.exe, astring.exe, baseline-browser-mapping.exe, browserslist.exe
+
+    2,752.7 MB   SDK
+      D:\SDK
+      exe=408  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: aitstatic.exe, appcert.exe, appcertui.exe, makeappx.exe
+
+    2,676.0 MB   虚拟环境
+      D:\VirtuslEnvironment
+      exe=75  卸载器=有
+      → 有卸载器 → 可能已装（可能绿色版）
+      主要 exe: python.exe, pythonw.exe, t32.exe, t64-arm.exe
+
+      235.5 MB   Go 语言
+      D:\Program Files\Go
+      exe=10  卸载器=无
+      → ★ 无进程 + 有 exe → 疑似残留
+      主要 exe: go.exe, gofmt.exe, asm.exe, cgo.exe
+
+================================================================================
+  疑似残留合计: 4.00 GB
+================================================================================

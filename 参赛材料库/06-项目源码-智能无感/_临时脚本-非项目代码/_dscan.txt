@@ -1,0 +1,426 @@
+================================================================================
+  D 盘完整扫描（顶层 + 二级）
+================================================================================
+
+  D 盘已用合计: 342.92 GB
+
+--------------------------------------------------------------------------------
+  顶层目录（按大小）
+--------------------------------------------------------------------------------
+
+     43.40 GB    74,158 个       8天  [D] AI音乐
+     38.04 GB         1 个       2天  [F] pagefile.sys
+     36.54 GB     1,020 个       7天  [D] ollama
+     36.51 GB       261 个       4天  [D] 临时文件
+     19.68 GB   114,445 个      23天  [D] 办公软件集合
+     18.62 GB   102,082 个       0天  [D] BaiduNetdiskDownload
+     17.54 GB    53,356 个      17天  [D] Qwen3 TTS
+     17.28 GB    56,099 个       1天  [D] msr150174
+     14.19 GB   108,439 个     371天  [D] unity
+     13.74 GB   142,697 个      17天  [D] Comfy-Desktop
+     13.11 GB    60,514 个       4天  [D] cxdownload
+     12.73 GB   237,317 个      15天  [D] Anaconda
+      4.27 GB     2,776 个     318天  [D] java
+      4.02 GB     2,614 个       0天  [D] cuda
+      3.76 GB    30,474 个       0天  [D] Program Files
+      3.73 GB    89,924 个      15天  [D] VCPchat
+      3.50 GB     7,948 个     360天  [D] dobao
+      3.38 GB     3,677 个      15天  [D] Quark
+      3.36 GB     1,648 个       9天  [D] KuGou
+      3.23 GB        68 个       5天  [D] AImodel
+      2.69 GB    11,474 个      15天  [D] SDK
+      2.61 GB    50,300 个      13天  [D] VirtuslEnvironment
+      1.99 GB     6,482 个       1天  [D] Microsoft VS Code
+      1.92 GB     1,099 个       5天  [D] BaiduNetdisk
+      1.82 GB     4,530 个     364天  [D] 新建文件夹 (7)
+      1.61 GB     4,961 个     364天  [D] Users
+      1.32 GB        10 个       4天  [D] 运行文件
+      1.30 GB     7,067 个      17天  [D] blender
+      1.28 GB     1,220 个       8天  [D] Program Files (x86)
+      1.17 GB   127,756 个      15天  [D] newapi
+      1015 MB     9,772 个       7天  [D] deepseek
+       906 MB       418 个      14天  [D] SogouInput
+       881 MB        32 个     371天  [D] WX
+       840 MB        14 个     372天  [D] 360MoveData
+       770 MB       542 个       1天  [D] coze
+       762 MB         8 个      23天  [D] 工具集
+       716 MB    65,496 个       1天  [D] 智跑校园
+       681 MB     1,042 个      15天  [D] Comfyui
+       655 MB        26 个      13天  [D] Almodel
+       572 MB     4,578 个     206天  [D] PCL 正式版 2.10.9
+       551 MB       285 个       4天  [D] mysql
+       537 MB       668 个      54天  [D] taptap
+       508 MB     3,488 个       7天  [D] qq
+       503 MB       107 个       8天  [D] vpn
+       465 MB     1,121 个     372天  [D] phpstudy_pro
+       464 MB       858 个     372天  [D] Photoshop CS6
+       448 MB       123 个      12天  [D] kugo
+       391 MB       625 个     127天  [D] cxstudy
+       355 MB     1,427 个     371天  [D] 6.1.13.7
+       353 MB       603 个     351天  [D] Kimi 智能助手
+       320 MB       129 个     371天  [D] Navicat Premium 16
+       300 MB    15,640 个      15天  [D] go
+       251 MB       336 个     372天  [D] Live2D Cubism 4.0
+       240 MB         4 个      14天  [D] hf_cache
+       225 MB       130 个      91天  [D] PC Optimizer
+       205 MB       117 个     371天  [D] Navicat Premium 12
+       201 MB         9 个     372天  [D] biajie
+       162 MB     4,580 个      15天  [D] python
+       125 MB        61 个      17天  [D] 模型
+       116 MB        43 个       1天  [D] 压缩
+       112 MB         2 个     372天  [D] 360Downloads
+        72 MB       105 个     372天  [D] EVCapture
+        46 MB        17 个       2天  [D] redis
+        27 MB       198 个     371天  [D] Bongo Cat Mver爱音
+        26 MB        25 个     285天  [D] wxbiaoqingbao
+        24 MB         2 个      15天  [D] c++
+        19 MB         4 个       1天  [D] cpolar
+        17 MB        31 个     357天  [D] anon
+        14 MB         6 个      17天  [D] 动作
+        13 MB         4 个     374天  [D] QQFile
+        10 MB        15 个     282天  [D] picdown
+        10 MB        24 个     372天  [D] [Saier]SAI Ver.2
+         7 MB     1,055 个      23天  [D] 小程序项目
+         7 MB         3 个       1天  [D] BaiduSyncdisk
+         6 MB       107 个      12天  [D] 7-Zip
+         4 MB        11 个      27天  [D] xxtfiles
+         3 MB         2 个     351天  [D] swiftshader
+         2 MB       148 个     372天  [D] 360RecycleBin
+       794 KB         3 个     351天  [D] locales
+       273 KB         4 个       9天  [D] ComfyUI工作流
+       248 KB         4 个       2天  [D] MapData
+        32 KB        10 个     372天  [D] WpSystem
+        28 KB         2 个     351天  [D] down
+         1 KB         2 个     351天  [D] CLIP STUDIO 1.5
+        129 B         1 个       0天  [D] $RECYCLE.BIN
+          0 B         0 个       2天  [D] 鏅鸿窇鏍″洯
+          0 B         0 个     372天  [D] steam++
+          0 B         0 个     360天  [D] log
+          0 B         0 个     371天  [D] leidian
+          0 B         0 个     371天  [D] iFontsClientFileCache
+          0 B         0 个     185天  [D] WindowsApps
+          0 B         0 个     184天  [D] WUDownloadCache
+          0 B         0 个      17天  [D] WPS Software
+          0 B         0 个     372天  [D] System Volume Information
+          0 B         0 个      17天  [D] ProgramData
+          0 B         0 个     371天  [D] Ksoftware
+          0 B         0 个     371天  [D] KDubaSoftDownloads
+          0 B         0 个     372天  [D] DeliveryOptimization
+          0 B         0 个       8天  [D] Config.Msi
+
+================================================================================
+  二级明细（仅 >500MB 的目录）
+================================================================================
+
+  ┌─ AI音乐  (43.40 GB)
+  │    26.59 GB       43 个    388天  [D] pretrain
+  │     8.31 GB   41,387 个    388天  [D] env
+  │     7.34 GB   32,454 个     11天  [D] DDSP-barbara-6.3
+  │      340 MB        2 个    211天  [D] DDSP6.2 白菜版 加入ASMR数据的底模
+  │      190 MB        3 个     10天  [D] 未命名混音项目 1 （AU 音轨） Audio
+  │      128 MB        3 个     12天  [D] separation_results
+  │      128 MB        3 个     12天  [D] karaoke_results
+  │      127 MB        2 个     12天  [D] other_results
+  │       64 MB        1 个     10天  [F] 未命名混音项目 1_缩混.wav
+  │       64 MB        1 个     10天  [F] 朋友的酒.wav
+  │       63 MB        1 个     12天  [D] deverb_results
+  │       46 MB        1 个      9天  [D] input
+  │       25 MB        1 个    388天  [F] MSST_GUI_v1.4_zh.exe
+  └─
+
+  ┌─ ollama  (36.54 GB)
+  │    32.29 GB       23 个      4天  [D] OlamaModel
+  │     2.73 GB      990 个      7天  [D] lib
+  │     1.46 GB        1 个     17天  [F] OllamaSetup.exe
+  │       27 MB        1 个      8天  [F] ollama.exe
+  │       26 MB        1 个      8天  [F] ollama app.exe
+  └─
+
+  ┌─ 临时文件  (36.51 GB)
+  │    18.56 GB       41 个     12天  [D] 第21期-TTS语音克隆高级运用
+  │    12.65 GB       48 个     12天  [D] Qwen3-TTS
+  │     3.84 GB       74 个     12天  [D] Lora
+  │      445 MB       26 个      8天  [D] output
+  │      267 MB        1 个     12天  [F] model_8000.pt
+  │      242 MB        1 个     12天  [D] vae
+  │      200 MB        1 个      9天  [F] body_pose_model.pth
+  │      147 MB        1 个      9天  [F] facenet.pth
+  │      141 MB        1 个      9天  [F] hand_pose_model.pth
+  │       46 MB       17 个      3天  [D] Redis-x64-5.0.14.1
+  └─
+
+  ┌─ 办公软件集合  (19.68 GB)
+  │     3.18 GB   11,438 个    364天  [D] Pr
+  │     2.74 GB    3,858 个    364天  [D] Ae
+  │     2.72 GB    2,963 个    364天  [D] Dn
+  │     2.45 GB    7,675 个    364天  [D] Me
+  │     2.31 GB   10,464 个    364天  [D] lrc
+  │     1.68 GB   33,442 个    364天  [D] id
+  │     1.41 GB    2,791 个    364天  [D] Ai
+  │     1.12 GB    1,742 个    364天  [D] Br
+  │     1.06 GB   39,054 个    364天  [D] Ad
+  │     1.00 GB    1,018 个    364天  [D] Au
+  └─
+
+  ┌─ BaiduNetdiskDownload  (18.62 GB)
+  │     8.25 GB   37,278 个    388天  [D] env
+  │     7.06 GB   42,642 个     11天  [D] DDSP-barbara-6.2
+  │     1.89 GB   21,779 个    375天  [D] WebGal_Terre整合包
+  │     1.14 GB        5 个    388天  [D] pretrain
+  │      110 MB        1 个    374天  [F] Live2D_Cubism_Setup_4.0.06_zh(1).exe
+  │      110 MB        1 个    372天  [F] Live2D_Cubism_Setup_4.0.06_zh(1)(1).exe
+  │       56 MB        1 个    318天  [F] JDK11_API帮助文档.CHM
+  └─
+
+  ┌─ Qwen3 TTS  (17.54 GB)
+  │    15.55 GB   53,355 个     17天  [D] qwen_tts_webui_cuda-licyk-windows-20260928-nightly
+  │     1.99 GB        1 个     17天  [F] qwen_tts_webui_cuda-licyk-windows-20260928-nightly.7z
+  └─
+
+  ┌─ msr150174  (17.28 GB)
+  │    12.55 GB   15,338 个     23天  [D] Documents
+  │     1.80 GB       66 个      7天  [D] Videos
+  │      896 MB       39 个      0天  [D] edge网页下载内容
+  │      653 MB   35,711 个      2天  [D] 项目
+  │      391 MB      102 个      1天  [D] c++学习
+  │      382 MB    4,243 个     23天  [D] edge
+  │      330 MB      526 个     23天  [D] Pictures
+  │      295 MB       10 个     23天  [D] ppt
+  │       30 MB       33 个     10天  [D] Music
+  │       22 MB       26 个     12天  [D] 文档
+  └─
+
+  ┌─ unity  (14.19 GB)
+  │    12.57 GB   94,594 个    371天  [D] setup
+  │     1.44 GB        7 个      0天  [D] down
+  │      188 MB   13,838 个    371天  [D] file
+  └─
+
+  ┌─ Comfy-Desktop  (13.74 GB)
+  │    13.04 GB  142,696 个     13天  [D] ComfyUI-Installs
+  │      718 MB        1 个     17天  [D] ComfyUI-Cache
+  └─
+
+  ┌─ cxdownload  (13.11 GB)
+  │     3.78 GB   21,676 个    364天  [D] Maya2023
+  │     2.59 GB    7,623 个    364天  [D] pycharm-professional-2024.1.6
+  │     1.99 GB   14,788 个    364天  [D] JianyingPro
+  │      995 MB    2,764 个    364天  [D] SketchUp 2022
+  │      966 MB    6,858 个    364天  [D] 微信web开发者工具
+  │      774 MB        1 个    364天  [F] pycharm-professional-2024.1.6.rar
+  │      386 MB        1 个    364天  [F] wamp64.rar
+  │      377 MB      154 个    364天  [D] Navicat Premium 16.3.7
+  │      344 MB    5,923 个    364天  [D] Dev-Cpp
+  │      269 MB        1 个      4天  [F] wampserver.zip.cxdl
+  │      242 MB        1 个    364天  [F] 微信web开发者工具.rar
+  │      191 MB      107 个   1978天  [D] Navicat Premium 12
+  │      138 MB        1 个      4天  [F] Navicat17.zip
+  │       87 MB      113 个    364天  [D] PixPin
+  │       34 MB        1 个    364天  [F] PixPin.rar
+  │     ... 其余 11 项  60 MB
+  └─
+
+  ┌─ Anaconda  (12.73 GB)
+  │    11.69 GB  237,316 个     15天  [D] acd
+  │     1.04 GB        1 个     15天  [F] Anaconda3-2026.07-1-Windows-x86_64.exe
+  └─
+
+  ┌─ java  (4.27 GB)
+  │     4.27 GB    2,776 个    318天  [D] IntelliJ IDEA 2025.1.1.1
+  └─
+
+  ┌─ cuda  (4.02 GB)
+  │     2.12 GB       50 个     15天  [D] lib
+  │     1.68 GB       43 个     15天  [D] bin
+  │      118 MB        5 个     15天  [D] nvvm
+  │       53 MB      426 个     15天  [D] extras
+  │       27 MB    1,932 个     15天  [D] include
+  │       27 MB      134 个     15天  [D] compute-sanitizer
+  └─
+
+  ┌─ Program Files  (3.76 GB)
+  │     1.99 GB    1,673 个    366天  [D] Tencent
+  │      445 MB      345 个    371天  [D] Unity Hub
+  │      409 MB    9,620 个     15天  [D] Git
+  │      322 MB      922 个    351天  [D] Steam++
+  │      297 MB      103 个    372天  [D] bilibili
+  │      235 MB   15,639 个     15天  [D] Go
+  │       98 MB    2,172 个    277天  [D] nodejs
+  └─
+
+  ┌─ VCPchat  (3.73 GB)
+  │     1.94 GB   52,104 个     12天  [D] VCPChat
+  │     1.79 GB   37,820 个     15天  [D] VCPToolBox
+  └─
+
+  ┌─ dobao  (3.50 GB)
+  │     3.50 GB    7,948 个      0天  [D] Doubao
+  └─
+
+  ┌─ Quark  (3.38 GB)
+  │     1.43 GB    1,885 个     15天  [D] 7.3.5.1009
+  │     1.29 GB      637 个     25天  [D] 7.2.2.1003
+  │      647 MB    1,146 个    104天  [D] components
+  └─
+
+  ┌─ KuGou  (3.36 GB)
+  │     3.31 GB    1,236 个      8天  [D] Temp
+  │       46 MB        2 个      9天  [D] KugouMusic
+  └─
+
+  ┌─ AImodel  (3.23 GB)
+  │     2.33 GB       27 个     13天  [D] Qwen3TTS
+  │      775 MB        5 个      5天  [D] lora
+  │      148 MB        1 个      9天  [F] MiniMax3_Boob Physics_v1.safetensors
+  └─
+
+  ┌─ SDK  (2.69 GB)
+  │      953 MB    1,924 个      8天  [D] Lib
+  │      458 MB      512 个     15天  [D] Windows Performance Toolkit
+  │      401 MB    1,005 个     15天  [D] Debuggers
+  │      317 MB    4,716 个      8天  [D] Include
+  │      276 MB      860 个      8天  [D] bin
+  │      156 MB    1,000 个      8天  [D] References
+  │       89 MB      149 个      8天  [D] Redist
+  │       46 MB      410 个     15天  [D] App Certification Kit
+  │       25 MB       87 个     15天  [D] Testing
+  └─
+
+  ┌─ VirtuslEnvironment  (2.61 GB)
+  │     2.50 GB   47,880 个     15天  [D] Lib
+  │       70 MB    1,392 个     15天  [D] Library
+  └─
+
+  ┌─ Microsoft VS Code  (1.99 GB)
+  │      771 MB    3,235 个      1天  [D] 16507d91be
+  │      730 MB    3,234 个      1天  [D] 6d62b1d5da
+  │      227 MB        1 个      2天  [F] old_Code.exe
+  │      227 MB        1 个      1天  [F] Code.exe
+  │       59 MB        6 个      1天  [D] bin
+  └─
+
+  ┌─ BaiduNetdisk  (1.92 GB)
+  │     1.28 GB      875 个     12天  [D] module
+  │      176 MB        1 个     28天  [F] libcef.dll
+  │       82 MB       10 个      1天  [D] AutoUpdate
+  │       53 MB        1 个      5天  [F] kernel.dll
+  │       53 MB        1 个     51天  [F] kernel.dll.o
+  │       52 MB        1 个     28天  [F] kernel_o.dll
+  └─
+
+  ┌─ 新建文件夹 (7)  (1.82 GB)
+  │     1.82 GB    4,530 个    364天  [D] Acrobat DC
+  └─
+
+  ┌─ Users  (1.61 GB)
+  │     1.61 GB    4,961 个    135天  [D] msr150174
+  └─
+
+  ┌─ 运行文件  (1.32 GB)
+  │      606 MB        1 个      4天  [F] Docker Desktop Installer.exe
+  │      276 MB        1 个      7天  [F] dsh-latest-windows-x64.exe
+  │      187 MB        1 个      6天  [F] Coze-v1.1.44-win32-x64.exe
+  │      118 MB        1 个     12天  [F] kugou_20151_x64.exe
+  │       64 MB        1 个     15天  [F] Git-2.56.0-64-bit.exe
+  │       63 MB        1 个     15天  [F] go1.27.1.windows-amd64.msi
+  │       30 MB        1 个      9天  [F] fnjs_2.3.9_x64_zh-CN.msi
+  └─
+
+  ┌─ blender  (1.30 GB)
+  │      349 MB    6,149 个     17天  [D] 5.2
+  │      348 MB        1 个     17天  [F] blender-5.2.2-windows-x64.msi
+  │      321 MB      812 个     17天  [D] blender.shared
+  │      108 MB        1 个     31天  [F] blender.exe
+  │       85 MB        1 个     31天  [F] blender.pdb
+  │       69 MB        2 个     16天  [D] 保存预案
+  │       38 MB        1 个     51天  [F] cycles_kernel_oneapi_aot.dll
+  └─
+
+  ┌─ Program Files (x86)  (1.28 GB)
+  │     1.14 GB    1,108 个    293天  [D] ByteDance
+  │      110 MB       96 个    351天  [D] GameStore
+  │       33 MB       16 个    371天  [D] 360
+  └─
+
+  ┌─ newapi  (1.17 GB)
+  │     1.17 GB  127,756 个     12天  [D] new-api
+  └─
+
+  ┌─ deepseek  (1015 MB)
+  │      649 MB    9,697 个     17天  [D] resources
+  │      233 MB        1 个     17天  [F] DeepSeek Harness.exe
+  │       48 MB       55 个     17天  [D] locales
+  │       25 MB        1 个     17天  [F] dxcompiler.dll
+  └─
+
+  ┌─ SogouInput  (906 MB)
+  │      616 MB      198 个     12天  [D] 16.9.0.5523
+  │      285 MB      217 个     17天  [D] Components
+  └─
+
+  ┌─ WX  (881 MB)
+  │      881 MB       32 个     31天  [D] Weixin
+  └─
+
+  ┌─ 360MoveData  (840 MB)
+  │      676 MB        8 个    372天  [D] Drivers
+  │      164 MB        1 个    371天  [D] KDubaSoftDownloads
+  └─
+
+  ┌─ coze  (770 MB)
+  │      580 MB      536 个      1天  [D] versions
+  │      187 MB        1 个      5天  [F] app_shell_installer.exe
+  └─
+
+  ┌─ 工具集  (762 MB)
+  │      335 MB        1 个    360天  [F] Doubao_installer.exe
+  │      250 MB        1 个    135天  [F] Trae_CN-Setup-x64.exe
+  │      169 MB        1 个    360天  [F] kimi_2.0.4.exe
+  └─
+
+  ┌─ 智跑校园  (716 MB)
+  │      220 MB   17,419 个      1天  [D] 后台管理
+  │      218 MB   17,378 个      2天  [D] 后台管理-VTJ
+  │      176 MB   18,376 个      3天  [D] 小程序
+  │       94 MB   11,634 个      2天  [D] _临时文件
+  └─
+
+  ┌─ Comfyui  (681 MB)
+  │      509 MB    1,041 个      7天  [D] Comfy Desktop
+  │      172 MB        1 个     17天  [F] Comfy-Desktop-Setup-phid1_01a0e8d1-1cc4-735d-9a10-8914ce552076.exe
+  └─
+
+  ┌─ Almodel  (655 MB)
+  │      655 MB       26 个      0天  [D] Qwen3-TTS-12Hz-0.6B-CustomVoice
+  └─
+
+  ┌─ PCL 正式版 2.10.9  (572 MB)
+  │      559 MB    4,572 个    351天  [D] .minecraft
+  └─
+
+  ┌─ mysql  (551 MB)
+  │      314 MB       67 个      4天  [D] bin
+  │      226 MB      140 个      4天  [D] lib
+  └─
+
+  ┌─ taptap  (537 MB)
+  │      150 MB        1 个    147天  [F] TapTap.exe
+  │      117 MB       24 个    145天  [D] logs
+  │       84 MB      478 个    199天  [D] UrhoXRuntime
+  │       40 MB      117 个    147天  [D] resources
+  │       37 MB        1 个    147天  [F] taptap.dll
+  └─
+
+  ┌─ qq  (508 MB)
+  │      345 MB    1,951 个    366天  [D] 1770655352
+  │      163 MB    1,537 个    366天  [D] nt_qq
+  └─
+
+  ┌─ vpn  (503 MB)
+  │      210 MB       12 个      9天  [D] Clash Verge
+  │       89 MB        1 个     13天  [F] VpnHoodClient-win-x64.msi
+  │       57 MB        1 个     13天  [F] Clash.Verge_2.5.6_x64-setup.exe
+  │       56 MB       37 个      0天  [D] SoftEther VPN Server
+  │       56 MB        1 个     13天  [F] softether-vpnserver_vpnbridge-v4.44-9807-rtm-2025.04.16-windows-x86_x64-intel.exe
+  │       26 MB       45 个      9天  [D] SSTap-beta
+  └─
