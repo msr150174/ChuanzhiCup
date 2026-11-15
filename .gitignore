@@ -56,6 +56,10 @@ temp/
 *.bak
 *.swp
 
+# ---- Obsidian 本地配置 ----
+.obsidian/
+.trash/
+
 # ---- 编辑器与系统 ----
 .vscode/*
 !.vscode/extensions.json
