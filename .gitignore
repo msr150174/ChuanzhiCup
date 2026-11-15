@@ -1,0 +1,73 @@
+# ============================================
+# 传智杯参赛仓库 · .gitignore
+# 原则：密钥永不入库、构建产物不入库、大文件不入库
+# ============================================
+
+# ---- 密钥与环境变量（最关键：泄露=违规）----
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+*.pem
+*.key
+*.p12
+secrets/
+credentials.json
+
+# ---- 依赖 ----
+node_modules/
+.pnpm-store/
+bower_components/
+vendor/
+
+# ---- 构建产物 ----
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.vercel/
+.turbo/
+*.tsbuildinfo
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ---- 小程序专用 ----
+miniprogram_npm/
+project.private.config.json
+
+# ---- 日志与临时文件 ----
+*.log
+npm-debug.log*
+yarn-error.log*
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# ---- 编辑器与系统 ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 大体积提交物（技术文档/视频请用 Release 或网盘，不入 git）----
+# 说明：演示视频、ZIP 参赛包等若确需入库，请单独用 git add -f 处理
+*.mp4
+*.mov
+*.avi
+!docs/demo/.gitkeep
