@@ -1,0 +1,22 @@
+{
+  "name": "guardian-admin-teaser",
+  "version": "1.0.0",
+  "private": true,
+  "description": "传智杯赛道一 · AI 节律守护 · 智能无感 —— 60 秒潮流短片（Remotion）",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion render Teaser out/teaser-60s.mp4",
+    "still": "remotion still"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.543",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.543"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "typescript": "5.8.3"
+  }
+}
